@@ -1,0 +1,8 @@
+{
+  "name": "Cards Against Undefined",
+  "description": "An undefined card game you play against friends, fiends and foes",
+  "repository": "https://github.com/neogeek/cards-against-undefined",
+  "keywords": ["card", "game", "multiplayer"],
+  "env": {},
+  "addons": []
+}

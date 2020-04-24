@@ -1,0 +1,31 @@
+{
+  "name": "cards-against-undefined",
+  "description": "An undefined card game you play against friends, fiends and foes",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=12.0"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@neogeek/websocket-event-wrapper": "github:neogeek/websocket-event-wrapper",
+    "qs": "6.9.3",
+    "shuffle-array": "1.0.1"
+  },
+  "devDependencies": {
+    "@neogeek/common-react-hooks": "github:neogeek/common-react-hooks",
+    "@neogeek/custom-webpack-cli": "github:neogeek/custom-webpack-cli",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-router-dom": "5.1.2",
+    "reconnecting-websocket": "4.4.0",
+    "styled-components": "5.1.0",
+    "uuid": "7.0.3",
+    "vh-check": "2.0.5"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "serve": "custom-webpack-dev-server-cli",
+    "build": "custom-webpack-cli"
+  },
+  "private": true
+}

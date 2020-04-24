@@ -1,0 +1,2296 @@
+{
+  "blackCards": [
+    {
+      "id": 0,
+      "text": "Why can't I sleep at night?",
+      "pick": 1
+    },
+    {
+      "id": 1,
+      "text": "I got 99 problems but _ ain't one.",
+      "pick": 1
+    },
+    {
+      "id": 2,
+      "text": "What's a girl's best friend?",
+      "pick": 1
+    },
+    {
+      "id": 3,
+      "text": "What's that smell?",
+      "pick": 1
+    },
+    {
+      "id": 4,
+      "text": "This is the way the world ends / This is the way the world ends / Not with a bang but with _.",
+      "pick": 1
+    },
+    {
+      "id": 5,
+      "text": "What is Batman's guilty pleasure?",
+      "pick": 1
+    },
+    {
+      "id": 6,
+      "text": "TSA guidelines now prohibit _ on airplanes.",
+      "pick": 1
+    },
+    {
+      "id": 7,
+      "text": "What ended my last relationship?",
+      "pick": 1
+    },
+    {
+      "id": 8,
+      "text": "MTV's new reality show features eight washed-up celebrities living with _.",
+      "pick": 1
+    },
+    {
+      "id": 9,
+      "text": "I drink to forget _.",
+      "pick": 1
+    },
+    {
+      "id": 10,
+      "text": "I'm sorry, Professor, but I couldn't complete my homework because of _.",
+      "pick": 1
+    },
+    {
+      "id": 11,
+      "text": "Alternative medicine is now embracing the curative powers of _.",
+      "pick": 1
+    },
+    {
+      "id": 12,
+      "text": "What's that sound?",
+      "pick": 1
+    },
+    {
+      "id": 13,
+      "text": "What's the next Happy Meal® toy?",
+      "pick": 1
+    },
+    {
+      "id": 14,
+      "text": "It's a pity that kids these days are all getting involved with _.",
+      "pick": 1
+    },
+    {
+      "id": 15,
+      "text": "In the new Disney Channel Original Movie, Hannah Montana struggles with _ for the first time.",
+      "pick": 1
+    },
+    {
+      "id": 16,
+      "text": "_. That's how I want to die.",
+      "pick": 1
+    },
+    {
+      "id": 17,
+      "text": "What does Dick Cheney prefer?",
+      "pick": 1
+    },
+    {
+      "id": 18,
+      "text": "What's the most emo?",
+      "pick": 1
+    },
+    {
+      "id": 19,
+      "text": "Instead of coal, Santa now gives the bad children _.",
+      "pick": 1
+    },
+    {
+      "id": 20,
+      "text": "Next from J.K. Rowling: Harry Potter and the Chamber of _.",
+      "pick": 1
+    },
+    {
+      "id": 21,
+      "text": "A romantic, candlelit dinner would be incomplete without _.",
+      "pick": 1
+    },
+    {
+      "id": 22,
+      "text": "White people like _.",
+      "pick": 1
+    },
+    {
+      "id": 23,
+      "text": "_. Betcha can't have just one!",
+      "pick": 1
+    },
+    {
+      "id": 24,
+      "text": "War!<br><br>What is it good for?",
+      "pick": 1
+    },
+    {
+      "id": 25,
+      "text": "BILLY MAYS HERE FOR _.",
+      "pick": 1
+    },
+    {
+      "id": 26,
+      "text": "_. High five, bro.",
+      "pick": 1
+    },
+    {
+      "id": 27,
+      "text": "During sex, I like to think about _.",
+      "pick": 1
+    },
+    {
+      "id": 28,
+      "text": "What did I bring back from Mexico?",
+      "pick": 1
+    },
+    {
+      "id": 29,
+      "text": "What are my parents hiding from me?",
+      "pick": 1
+    },
+    {
+      "id": 30,
+      "text": "What will always get you laid?",
+      "pick": 1
+    },
+    {
+      "id": 31,
+      "text": "What would grandma find disturbing, yet oddly charming?",
+      "pick": 1
+    },
+    {
+      "id": 32,
+      "text": "What did the U.S. airdrop to the children of Afghanistan?",
+      "pick": 1
+    },
+    {
+      "id": 33,
+      "text": "What helps Obama unwind?",
+      "pick": 1
+    },
+    {
+      "id": 34,
+      "text": "What's there a ton of in heaven?",
+      "pick": 1
+    },
+    {
+      "id": 35,
+      "text": "Major League Baseball has banned _ for giving players an unfair advantage.",
+      "pick": 1
+    },
+    {
+      "id": 36,
+      "text": "When I am a billionaire, I shall erect a 50-foot statue to commemorate _.",
+      "pick": 1
+    },
+    {
+      "id": 37,
+      "text": "What's the new fad diet?",
+      "pick": 1
+    },
+    {
+      "id": 38,
+      "text": "When I am the President of the United States, I will create the Department of _.",
+      "pick": 1
+    },
+    {
+      "id": 39,
+      "text": "_. It's a trap!",
+      "pick": 1
+    },
+    {
+      "id": 40,
+      "text": "How am I maintaining my relationship status?",
+      "pick": 1
+    },
+    {
+      "id": 41,
+      "text": "What will I bring back in time to convince people that I am a powerful wizard?",
+      "pick": 1
+    },
+    {
+      "id": 42,
+      "text": "While the United States raced the Soviet Union to the moon, the Mexican government funneled millions of pesos into research on _.",
+      "pick": 1
+    },
+    {
+      "id": 43,
+      "text": "Coming to Broadway this season, _: The Musical.",
+      "pick": 1
+    },
+    {
+      "id": 44,
+      "text": "What's my secret power?",
+      "pick": 1
+    },
+    {
+      "id": 45,
+      "text": "What gives me uncontrollable gas?",
+      "pick": 1
+    },
+    {
+      "id": 46,
+      "text": "But before I kill you, Mr. Bond, I must show you _.",
+      "pick": 1
+    },
+    {
+      "id": 47,
+      "text": "What never fails to liven up the party?",
+      "pick": 1
+    },
+    {
+      "id": 48,
+      "text": "What am I giving up for Lent?",
+      "pick": 1
+    },
+    {
+      "id": 49,
+      "text": "What do old people smell like? ",
+      "pick": 1
+    },
+    {
+      "id": 50,
+      "text": "The class field trip was completely ruined by _.",
+      "pick": 1
+    },
+    {
+      "id": 51,
+      "text": "When Pharaoh remained unmoved, Moses called down a plague of _.",
+      "pick": 1
+    },
+    {
+      "id": 52,
+      "text": "I do not know with which weapons World War III will be fought, but World War IV will be fought with _.",
+      "pick": 1
+    },
+    {
+      "id": 53,
+      "text": "What's Teach for America using to inspire inner city students to succeed?",
+      "pick": 1
+    },
+    {
+      "id": 54,
+      "text": "In Michael Jackson's final moments, he thought about _.",
+      "pick": 1
+    },
+    {
+      "id": 55,
+      "text": "Why do I hurt all over?",
+      "pick": 1
+    },
+    {
+      "id": 56,
+      "text": "Studies show that lab rats navigate mazes 50% faster after being exposed to _.",
+      "pick": 1
+    },
+    {
+      "id": 57,
+      "text": "Why am I sticky?",
+      "pick": 1
+    },
+    {
+      "id": 58,
+      "text": "What's my anti-drug?",
+      "pick": 1
+    },
+    {
+      "id": 59,
+      "text": "And the Academy Award for _ goes to _.",
+      "pick": 2
+    },
+    {
+      "id": 60,
+      "text": "For my next trick, I will pull _ out of _.",
+      "pick": 2
+    },
+    {
+      "id": 61,
+      "text": "_: Good to the last drop.",
+      "pick": 1
+    },
+    {
+      "id": 62,
+      "text": "What did Vin Diesel eat for dinner?",
+      "pick": 1
+    },
+    {
+      "id": 63,
+      "text": "_: kid-tested, mother-approved.",
+      "pick": 1
+    },
+    {
+      "id": 64,
+      "text": "What gets better with age?",
+      "pick": 1
+    },
+    {
+      "id": 65,
+      "text": "I never truly understood _ until I encountered _.",
+      "pick": 2
+    },
+    {
+      "id": 66,
+      "text": "Rumor has it that Vladimir Putin's favorite delicacy is _ stuffed with _.",
+      "pick": 2
+    },
+    {
+      "id": 67,
+      "text": "Lifetime® presents _, the story of _.",
+      "pick": 2
+    },
+    {
+      "id": 68,
+      "text": "Make a haiku.",
+      "pick": 3
+    },
+    {
+      "id": 69,
+      "text": "In M. Night Shyamalan's new movie, Bruce Willis discovers that _ had really been _ all along.",
+      "pick": 2
+    },
+    {
+      "id": 70,
+      "text": "_ is a slippery slope that leads to _.",
+      "pick": 2
+    },
+    {
+      "id": 71,
+      "text": "In a world ravaged by _, our only solace is _.",
+      "pick": 2
+    },
+    {
+      "id": 72,
+      "text": "That's right, I killed _. How, you ask? _.",
+      "pick": 2
+    },
+    {
+      "id": 73,
+      "text": "When I was tripping on acid, _ turned into _.",
+      "pick": 2
+    },
+    {
+      "id": 74,
+      "text": "_ + _ = _.",
+      "pick": 3
+    },
+    {
+      "id": 75,
+      "text": "What's the next superhero/sidekick duo?",
+      "pick": 2
+    },
+    {
+      "id": 76,
+      "text": "Dear Abby,<br><br>I'm having some trouble with _ and would like your advice.",
+      "pick": 1
+    },
+    {
+      "id": 77,
+      "text": "After the earthquake, Sean Penn brought _ to the people of Haiti.",
+      "pick": 1
+    },
+    {
+      "id": 78,
+      "text": "In L.A. County Jail, word is you can trade 200 cigarettes for _.",
+      "pick": 1
+    },
+    {
+      "id": 79,
+      "text": "Maybe she's born with it. Maybe it's _.",
+      "pick": 1
+    },
+    {
+      "id": 80,
+      "text": "Life for American Indians was forever changed when the White Man introduced them to _.",
+      "pick": 1
+    },
+    {
+      "id": 81,
+      "text": "Next on ESPN2, the World Series of _.",
+      "pick": 1
+    },
+    {
+      "id": 82,
+      "text": "Step 1: _. Step 2: _. Step 3: Profit.",
+      "pick": 2
+    },
+    {
+      "id": 83,
+      "text": "Here is the church<br>Here is the steeple<br>Open the doors<br>And there is _.",
+      "pick": 1
+    },
+    {
+      "id": 84,
+      "text": "How did I lose my virginity?",
+      "pick": 1
+    },
+    {
+      "id": 85,
+      "text": "During his childhood, Salvador Dalí produced hundreds of paintings of _.",
+      "pick": 1
+    },
+    {
+      "id": 86,
+      "text": "In 1,000 years, when paper money is a distant memory, how will we pay for goods and services?",
+      "pick": 1
+    },
+    {
+      "id": 87,
+      "text": "What don't you want to find in your Kung Pao chicken?",
+      "pick": 1
+    },
+    {
+      "id": 88,
+      "text": "The Smithsonian Museum of Natural History has just opened an exhibit on _.",
+      "pick": 1
+    },
+    {
+      "id": 89,
+      "text": "Daddy, why is Mommy crying?",
+      "pick": 1
+    }
+  ],
+  "whiteCards": [
+    {
+      "id": 0,
+      "text": "Coat hanger abortions."
+    },
+    {
+      "id": 1,
+      "text": "Man meat."
+    },
+    {
+      "id": 2,
+      "text": "Autocannibalism."
+    },
+    {
+      "id": 3,
+      "text": "Vigorous jazz hands."
+    },
+    {
+      "id": 4,
+      "text": "Flightless birds."
+    },
+    {
+      "id": 5,
+      "text": "Pictures of boobs."
+    },
+    {
+      "id": 6,
+      "text": "Doing the right thing."
+    },
+    {
+      "id": 7,
+      "text": "The violation of our most basic human rights."
+    },
+    {
+      "id": 8,
+      "text": "Viagra®."
+    },
+    {
+      "id": 9,
+      "text": "Self-loathing."
+    },
+    {
+      "id": 10,
+      "text": "Spectacular abs."
+    },
+    {
+      "id": 11,
+      "text": "A balanced breakfast."
+    },
+    {
+      "id": 12,
+      "text": "Roofies."
+    },
+    {
+      "id": 13,
+      "text": "Concealing a boner."
+    },
+    {
+      "id": 14,
+      "text": "Amputees."
+    },
+    {
+      "id": 15,
+      "text": "The Big Bang."
+    },
+    {
+      "id": 16,
+      "text": "Former President George W. Bush."
+    },
+    {
+      "id": 17,
+      "text": "The Rev. Dr. Martin Luther King, Jr."
+    },
+    {
+      "id": 18,
+      "text": "Smegma."
+    },
+    {
+      "id": 19,
+      "text": "Being marginalized."
+    },
+    {
+      "id": 20,
+      "text": "Cuddling."
+    },
+    {
+      "id": 21,
+      "text": "Laying an egg."
+    },
+    {
+      "id": 22,
+      "text": "The Pope."
+    },
+    {
+      "id": 23,
+      "text": "Aaron Burr."
+    },
+    {
+      "id": 24,
+      "text": "Genital piercings."
+    },
+    {
+      "id": 25,
+      "text": "Fingering."
+    },
+    {
+      "id": 26,
+      "text": "A bleached asshole."
+    },
+    {
+      "id": 27,
+      "text": "Horse meat."
+    },
+    {
+      "id": 28,
+      "text": "Fear itself."
+    },
+    {
+      "id": 29,
+      "text": "Science."
+    },
+    {
+      "id": 30,
+      "text": "Elderly Japanese men."
+    },
+    {
+      "id": 31,
+      "text": "Stranger danger."
+    },
+    {
+      "id": 32,
+      "text": "The terrorists."
+    },
+    {
+      "id": 33,
+      "text": "Praying the gay away."
+    },
+    {
+      "id": 34,
+      "text": "Same-sex ice dancing."
+    },
+    {
+      "id": 35,
+      "text": "Ethnic cleansing."
+    },
+    {
+      "id": 36,
+      "text": "Cheating in the Special Olympics."
+    },
+    {
+      "id": 37,
+      "text": "German dungeon porn."
+    },
+    {
+      "id": 38,
+      "text": "Bingeing and purging."
+    },
+    {
+      "id": 39,
+      "text": "Making a pouty face."
+    },
+    {
+      "id": 40,
+      "text": "William Shatner."
+    },
+    {
+      "id": 41,
+      "text": "Heteronormativity."
+    },
+    {
+      "id": 42,
+      "text": "Nickelback."
+    },
+    {
+      "id": 43,
+      "text": "Tom Cruise."
+    },
+    {
+      "id": 44,
+      "text": "The profoundly handicapped."
+    },
+    {
+      "id": 45,
+      "text": "The placenta."
+    },
+    {
+      "id": 46,
+      "text": "Chainsaws for hands."
+    },
+    {
+      "id": 47,
+      "text": "Arnold Schwarzenegger."
+    },
+    {
+      "id": 48,
+      "text": "An icepick lobotomy."
+    },
+    {
+      "id": 49,
+      "text": "Goblins."
+    },
+    {
+      "id": 50,
+      "text": "Object permanence."
+    },
+    {
+      "id": 51,
+      "text": "Dying."
+    },
+    {
+      "id": 52,
+      "text": "Foreskin."
+    },
+    {
+      "id": 53,
+      "text": "A falcon with a cap on its head."
+    },
+    {
+      "id": 54,
+      "text": "Hormone injections."
+    },
+    {
+      "id": 55,
+      "text": "Dying of dysentery."
+    },
+    {
+      "id": 56,
+      "text": "Sexy pillow fights."
+    },
+    {
+      "id": 57,
+      "text": "The invisible hand."
+    },
+    {
+      "id": 58,
+      "text": "A really cool hat."
+    },
+    {
+      "id": 59,
+      "text": "Sean Penn."
+    },
+    {
+      "id": 60,
+      "text": "Heartwarming orphans."
+    },
+    {
+      "id": 61,
+      "text": "The clitoris."
+    },
+    {
+      "id": 62,
+      "text": "The Three-Fifths compromise."
+    },
+    {
+      "id": 63,
+      "text": "A sad handjob."
+    },
+    {
+      "id": 64,
+      "text": "Men."
+    },
+    {
+      "id": 65,
+      "text": "Historically black colleges."
+    },
+    {
+      "id": 66,
+      "text": "A micropenis."
+    },
+    {
+      "id": 67,
+      "text": "Raptor attacks."
+    },
+    {
+      "id": 68,
+      "text": "Agriculture."
+    },
+    {
+      "id": 69,
+      "text": "Vikings."
+    },
+    {
+      "id": 70,
+      "text": "Pretending to care."
+    },
+    {
+      "id": 71,
+      "text": "The Underground Railroad."
+    },
+    {
+      "id": 72,
+      "text": "My humps."
+    },
+    {
+      "id": 73,
+      "text": "Being a dick to children."
+    },
+    {
+      "id": 74,
+      "text": "Geese."
+    },
+    {
+      "id": 75,
+      "text": "Bling."
+    },
+    {
+      "id": 76,
+      "text": "Sniffing glue."
+    },
+    {
+      "id": 77,
+      "text": "The South."
+    },
+    {
+      "id": 78,
+      "text": "An Oedipus complex."
+    },
+    {
+      "id": 79,
+      "text": "Eating all of the cookies before the AIDS bake-sale."
+    },
+    {
+      "id": 80,
+      "text": "Sexting."
+    },
+    {
+      "id": 81,
+      "text": "YOU MUST CONSTRUCT ADDITIONAL PYLONS."
+    },
+    {
+      "id": 82,
+      "text": "Mutually-assured destruction."
+    },
+    {
+      "id": 83,
+      "text": "Sunshine and rainbows."
+    },
+    {
+      "id": 84,
+      "text": "Count Chocula."
+    },
+    {
+      "id": 85,
+      "text": "Sharing needles."
+    },
+    {
+      "id": 86,
+      "text": "Being rich."
+    },
+    {
+      "id": 87,
+      "text": "Skeletor."
+    },
+    {
+      "id": 88,
+      "text": "A sausage festival."
+    },
+    {
+      "id": 89,
+      "text": "Michael Jackson."
+    },
+    {
+      "id": 90,
+      "text": "Emotions."
+    },
+    {
+      "id": 91,
+      "text": "Farting and walking away."
+    },
+    {
+      "id": 92,
+      "text": "The Chinese gymnastics team."
+    },
+    {
+      "id": 93,
+      "text": "Necrophilia."
+    },
+    {
+      "id": 94,
+      "text": "Spontaneous human combustion."
+    },
+    {
+      "id": 95,
+      "text": "Yeast."
+    },
+    {
+      "id": 96,
+      "text": "Leaving an awkward voicemail."
+    },
+    {
+      "id": 97,
+      "text": "Dick Cheney."
+    },
+    {
+      "id": 98,
+      "text": "White people."
+    },
+    {
+      "id": 99,
+      "text": "Penis envy."
+    },
+    {
+      "id": 100,
+      "text": "Teaching a robot to love."
+    },
+    {
+      "id": 101,
+      "text": "Sperm whales."
+    },
+    {
+      "id": 102,
+      "text": "Scrubbing under the folds."
+    },
+    {
+      "id": 103,
+      "text": "Panda sex."
+    },
+    {
+      "id": 104,
+      "text": "Whipping it out."
+    },
+    {
+      "id": 105,
+      "text": "Catapults."
+    },
+    {
+      "id": 106,
+      "text": "Masturbation."
+    },
+    {
+      "id": 107,
+      "text": "Natural selection."
+    },
+    {
+      "id": 108,
+      "text": "Opposable thumbs."
+    },
+    {
+      "id": 109,
+      "text": "A sassy black woman."
+    },
+    {
+      "id": 110,
+      "text": "AIDS."
+    },
+    {
+      "id": 111,
+      "text": "The KKK."
+    },
+    {
+      "id": 112,
+      "text": "Figgy pudding."
+    },
+    {
+      "id": 113,
+      "text": "Seppuku."
+    },
+    {
+      "id": 114,
+      "text": "Gandhi."
+    },
+    {
+      "id": 115,
+      "text": "Preteens."
+    },
+    {
+      "id": 116,
+      "text": "Toni Morrison's vagina."
+    },
+    {
+      "id": 117,
+      "text": "Five-Dollar Footlongs™."
+    },
+    {
+      "id": 118,
+      "text": "Land mines."
+    },
+    {
+      "id": 119,
+      "text": "A sea of troubles."
+    },
+    {
+      "id": 120,
+      "text": "A zesty breakfast burrito."
+    },
+    {
+      "id": 121,
+      "text": "Christopher Walken."
+    },
+    {
+      "id": 122,
+      "text": "Friction."
+    },
+    {
+      "id": 123,
+      "text": "Balls."
+    },
+    {
+      "id": 124,
+      "text": "Dental dams."
+    },
+    {
+      "id": 125,
+      "text": "A can of whoop-ass."
+    },
+    {
+      "id": 126,
+      "text": "A tiny horse."
+    },
+    {
+      "id": 127,
+      "text": "Waiting 'til marriage."
+    },
+    {
+      "id": 128,
+      "text": "Authentic Mexican cuisine."
+    },
+    {
+      "id": 129,
+      "text": "Genghis Khan."
+    },
+    {
+      "id": 130,
+      "text": "Old-people smell."
+    },
+    {
+      "id": 131,
+      "text": "Feeding Rosie O'Donnell."
+    },
+    {
+      "id": 132,
+      "text": "Pixelated bukkake."
+    },
+    {
+      "id": 133,
+      "text": "Friends with benefits."
+    },
+    {
+      "id": 134,
+      "text": "The token minority."
+    },
+    {
+      "id": 135,
+      "text": "The Tempur-Pedic® Swedish Sleep System™."
+    },
+    {
+      "id": 136,
+      "text": "A thermonuclear detonation."
+    },
+    {
+      "id": 137,
+      "text": "Take-backsies."
+    },
+    {
+      "id": 138,
+      "text": "The Rapture."
+    },
+    {
+      "id": 139,
+      "text": "A cooler full of organs."
+    },
+    {
+      "id": 140,
+      "text": "Sweet, sweet vengeance."
+    },
+    {
+      "id": 141,
+      "text": "RoboCop."
+    },
+    {
+      "id": 142,
+      "text": "Keanu Reeves."
+    },
+    {
+      "id": 143,
+      "text": "Drinking alone."
+    },
+    {
+      "id": 144,
+      "text": "Giving 110%."
+    },
+    {
+      "id": 145,
+      "text": "Flesh-eating bacteria."
+    },
+    {
+      "id": 146,
+      "text": "The American Dream."
+    },
+    {
+      "id": 147,
+      "text": "Taking off your shirt."
+    },
+    {
+      "id": 148,
+      "text": "Me time."
+    },
+    {
+      "id": 149,
+      "text": "A murder most foul."
+    },
+    {
+      "id": 150,
+      "text": "The inevitable heat death of the universe."
+    },
+    {
+      "id": 151,
+      "text": "The folly of man."
+    },
+    {
+      "id": 152,
+      "text": "That thing that electrocutes your abs."
+    },
+    {
+      "id": 153,
+      "text": "Cards Against Humanity."
+    },
+    {
+      "id": 154,
+      "text": "Fiery poops."
+    },
+    {
+      "id": 155,
+      "text": "Poor people."
+    },
+    {
+      "id": 156,
+      "text": "Edible underpants."
+    },
+    {
+      "id": 157,
+      "text": "Britney Spears at 55."
+    },
+    {
+      "id": 158,
+      "text": "All-you-can-eat shrimp for $4.99."
+    },
+    {
+      "id": 159,
+      "text": "Pooping back and forth. Forever."
+    },
+    {
+      "id": 160,
+      "text": "Fancy Feast®."
+    },
+    {
+      "id": 161,
+      "text": "Jewish fraternities."
+    },
+    {
+      "id": 162,
+      "text": "Being a motherfucking sorcerer."
+    },
+    {
+      "id": 163,
+      "text": "Pulling out."
+    },
+    {
+      "id": 164,
+      "text": "Picking up girls at the abortion clinic."
+    },
+    {
+      "id": 165,
+      "text": "The homosexual agenda."
+    },
+    {
+      "id": 166,
+      "text": "The Holy Bible."
+    },
+    {
+      "id": 167,
+      "text": "Passive-agression."
+    },
+    {
+      "id": 168,
+      "text": "Ronald Reagan."
+    },
+    {
+      "id": 169,
+      "text": "Vehicular manslaughter."
+    },
+    {
+      "id": 170,
+      "text": "Nipple blades."
+    },
+    {
+      "id": 171,
+      "text": "Assless chaps."
+    },
+    {
+      "id": 172,
+      "text": "Full frontal nudity."
+    },
+    {
+      "id": 173,
+      "text": "Hulk Hogan."
+    },
+    {
+      "id": 174,
+      "text": "Daddy issues."
+    },
+    {
+      "id": 175,
+      "text": "The hardworking Mexican."
+    },
+    {
+      "id": 176,
+      "text": "Natalie Portman."
+    },
+    {
+      "id": 177,
+      "text": "Waking up half-naked in a Denny's parking lot."
+    },
+    {
+      "id": 178,
+      "text": "God."
+    },
+    {
+      "id": 179,
+      "text": "Sean Connery."
+    },
+    {
+      "id": 180,
+      "text": "Saxophone solos."
+    },
+    {
+      "id": 181,
+      "text": "Gloryholes."
+    },
+    {
+      "id": 182,
+      "text": "The World of Warcraft."
+    },
+    {
+      "id": 183,
+      "text": "Homeless people."
+    },
+    {
+      "id": 184,
+      "text": "Scalping."
+    },
+    {
+      "id": 185,
+      "text": "Darth Vader."
+    },
+    {
+      "id": 186,
+      "text": "Eating the last known bison."
+    },
+    {
+      "id": 187,
+      "text": "Guys who don't call."
+    },
+    {
+      "id": 188,
+      "text": "Hot Pockets®."
+    },
+    {
+      "id": 189,
+      "text": "A time travel paradox."
+    },
+    {
+      "id": 190,
+      "text": "The milk man."
+    },
+    {
+      "id": 191,
+      "text": "Testicular torsion."
+    },
+    {
+      "id": 192,
+      "text": "Dropping a chandelier on your enemies and riding the rope up."
+    },
+    {
+      "id": 193,
+      "text": "World peace."
+    },
+    {
+      "id": 194,
+      "text": "A salty surprise."
+    },
+    {
+      "id": 195,
+      "text": "Poorly-timed Holocaust jokes."
+    },
+    {
+      "id": 196,
+      "text": "Smallpox blankets."
+    },
+    {
+      "id": 197,
+      "text": "Licking things to claim them as your own."
+    },
+    {
+      "id": 198,
+      "text": "The heart of a child."
+    },
+    {
+      "id": 199,
+      "text": "Robert Downey, Jr."
+    },
+    {
+      "id": 200,
+      "text": "Lockjaw."
+    },
+    {
+      "id": 201,
+      "text": "Eugenics."
+    },
+    {
+      "id": 202,
+      "text": "A good sniff."
+    },
+    {
+      "id": 203,
+      "text": "Friendly fire."
+    },
+    {
+      "id": 204,
+      "text": "The taint; the grundle; the fleshy fun-bridge."
+    },
+    {
+      "id": 205,
+      "text": "Wearing underwear inside-out to avoid doing laundry."
+    },
+    {
+      "id": 206,
+      "text": "Hurricane Katrina."
+    },
+    {
+      "id": 207,
+      "text": "Free samples."
+    },
+    {
+      "id": 208,
+      "text": "Jerking off into a pool of children's tears."
+    },
+    {
+      "id": 209,
+      "text": "A foul mouth."
+    },
+    {
+      "id": 210,
+      "text": "The glass ceiling."
+    },
+    {
+      "id": 211,
+      "text": "Republicans."
+    },
+    {
+      "id": 212,
+      "text": "Explosions."
+    },
+    {
+      "id": 213,
+      "text": "Michelle Obama's arms."
+    },
+    {
+      "id": 214,
+      "text": "Getting really high."
+    },
+    {
+      "id": 215,
+      "text": "Attitude."
+    },
+    {
+      "id": 216,
+      "text": "Sarah Palin."
+    },
+    {
+      "id": 217,
+      "text": "The Übermensch."
+    },
+    {
+      "id": 218,
+      "text": "Altar boys."
+    },
+    {
+      "id": 219,
+      "text": "My soul."
+    },
+    {
+      "id": 220,
+      "text": "My sex life."
+    },
+    {
+      "id": 221,
+      "text": "Pedophiles."
+    },
+    {
+      "id": 222,
+      "text": "72 virgins."
+    },
+    {
+      "id": 223,
+      "text": "Pabst Blue Ribbon."
+    },
+    {
+      "id": 224,
+      "text": "Domino's™ Oreo™ Dessert Pizza."
+    },
+    {
+      "id": 225,
+      "text": "A snapping turtle biting the tip of your penis."
+    },
+    {
+      "id": 226,
+      "text": "The Blood of Christ."
+    },
+    {
+      "id": 227,
+      "text": "Half-assed foreplay."
+    },
+    {
+      "id": 228,
+      "text": "My collection of high-tech sex toys."
+    },
+    {
+      "id": 229,
+      "text": "A middle-aged man on roller skates."
+    },
+    {
+      "id": 230,
+      "text": "Bitches."
+    },
+    {
+      "id": 231,
+      "text": "Bill Nye the Science Guy."
+    },
+    {
+      "id": 232,
+      "text": "Italians."
+    },
+    {
+      "id": 233,
+      "text": "A windmill full of corpses."
+    },
+    {
+      "id": 234,
+      "text": "Adderall™."
+    },
+    {
+      "id": 235,
+      "text": "Crippling debt."
+    },
+    {
+      "id": 236,
+      "text": "A stray pube."
+    },
+    {
+      "id": 237,
+      "text": "Prancing."
+    },
+    {
+      "id": 238,
+      "text": "Passing a kidney stone."
+    },
+    {
+      "id": 239,
+      "text": "A brain tumor."
+    },
+    {
+      "id": 240,
+      "text": "Leprosy."
+    },
+    {
+      "id": 241,
+      "text": "Puppies!"
+    },
+    {
+      "id": 242,
+      "text": "Bees?"
+    },
+    {
+      "id": 243,
+      "text": "Frolicking."
+    },
+    {
+      "id": 244,
+      "text": "Repression."
+    },
+    {
+      "id": 245,
+      "text": "Road head."
+    },
+    {
+      "id": 246,
+      "text": "A bag of magic beans."
+    },
+    {
+      "id": 247,
+      "text": "An asymmetric boob job."
+    },
+    {
+      "id": 248,
+      "text": "Dead parents."
+    },
+    {
+      "id": 249,
+      "text": "Public ridicule."
+    },
+    {
+      "id": 250,
+      "text": "A mating display."
+    },
+    {
+      "id": 251,
+      "text": "A mime having a stroke."
+    },
+    {
+      "id": 252,
+      "text": "Stephen Hawking talking dirty."
+    },
+    {
+      "id": 253,
+      "text": "African children."
+    },
+    {
+      "id": 254,
+      "text": "Mouth herpes."
+    },
+    {
+      "id": 255,
+      "text": "Overcompensation."
+    },
+    {
+      "id": 256,
+      "text": "Riding off into the sunset."
+    },
+    {
+      "id": 257,
+      "text": "Being on fire."
+    },
+    {
+      "id": 258,
+      "text": "Tangled Slinkys."
+    },
+    {
+      "id": 259,
+      "text": "Civilian casualties."
+    },
+    {
+      "id": 260,
+      "text": "Auschwitz."
+    },
+    {
+      "id": 261,
+      "text": "My genitals."
+    },
+    {
+      "id": 262,
+      "text": "Not reciprocating oral sex."
+    },
+    {
+      "id": 263,
+      "text": "Lactation."
+    },
+    {
+      "id": 264,
+      "text": "Being fabulous."
+    },
+    {
+      "id": 265,
+      "text": "Shaquille O'Neal's acting career."
+    },
+    {
+      "id": 266,
+      "text": "My relationship status."
+    },
+    {
+      "id": 267,
+      "text": "Asians who aren't good at math."
+    },
+    {
+      "id": 268,
+      "text": "Alcoholism."
+    },
+    {
+      "id": 269,
+      "text": "Incest."
+    },
+    {
+      "id": 270,
+      "text": "Grave robbing."
+    },
+    {
+      "id": 271,
+      "text": "Hope."
+    },
+    {
+      "id": 272,
+      "text": "8 oz. of sweet Mexican black-tar heroin."
+    },
+    {
+      "id": 273,
+      "text": "Kids with ass cancer."
+    },
+    {
+      "id": 274,
+      "text": "Winking at old people."
+    },
+    {
+      "id": 275,
+      "text": "The Jews."
+    },
+    {
+      "id": 276,
+      "text": "Justin Bieber."
+    },
+    {
+      "id": 277,
+      "text": "Doin' it in the butt."
+    },
+    {
+      "id": 278,
+      "text": "A lifetime of sadness."
+    },
+    {
+      "id": 279,
+      "text": "The Hamburglar."
+    },
+    {
+      "id": 280,
+      "text": "Swooping."
+    },
+    {
+      "id": 281,
+      "text": "Classist undertones."
+    },
+    {
+      "id": 282,
+      "text": "New Age music."
+    },
+    {
+      "id": 283,
+      "text": "Not giving a shit about the Third World."
+    },
+    {
+      "id": 284,
+      "text": "The Kool-Aid Man."
+    },
+    {
+      "id": 285,
+      "text": "A hot mess."
+    },
+    {
+      "id": 286,
+      "text": "Tentacle porn."
+    },
+    {
+      "id": 287,
+      "text": "Lumberjack fantasies."
+    },
+    {
+      "id": 288,
+      "text": "The gays."
+    },
+    {
+      "id": 289,
+      "text": "Scientology."
+    },
+    {
+      "id": 290,
+      "text": "Estrogen."
+    },
+    {
+      "id": 291,
+      "text": "GoGurt®."
+    },
+    {
+      "id": 292,
+      "text": "Judge Judy."
+    },
+    {
+      "id": 293,
+      "text": "Dick fingers."
+    },
+    {
+      "id": 294,
+      "text": "Racism."
+    },
+    {
+      "id": 295,
+      "text": "Surprise sex!"
+    },
+    {
+      "id": 296,
+      "text": "Police brutality."
+    },
+    {
+      "id": 297,
+      "text": "Passable transvestites."
+    },
+    {
+      "id": 298,
+      "text": "The Virginia Tech Massacre."
+    },
+    {
+      "id": 299,
+      "text": "When you fart and a little bit comes out."
+    },
+    {
+      "id": 300,
+      "text": "Oompa-Loompas."
+    },
+    {
+      "id": 301,
+      "text": "A fetus."
+    },
+    {
+      "id": 302,
+      "text": "Obesity."
+    },
+    {
+      "id": 303,
+      "text": "Tasteful sideboob."
+    },
+    {
+      "id": 304,
+      "text": "Hot people."
+    },
+    {
+      "id": 305,
+      "text": "BATMAN!!!"
+    },
+    {
+      "id": 306,
+      "text": "Black people."
+    },
+    {
+      "id": 307,
+      "text": "A gassy antelope."
+    },
+    {
+      "id": 308,
+      "text": "Sexual tension."
+    },
+    {
+      "id": 309,
+      "text": "Third base."
+    },
+    {
+      "id": 310,
+      "text": "Racially-biased SAT questions."
+    },
+    {
+      "id": 311,
+      "text": "Porn stars."
+    },
+    {
+      "id": 312,
+      "text": "A Super Soaker™ full of cat pee."
+    },
+    {
+      "id": 313,
+      "text": "Muhammed (Praise Be Unto Him)."
+    },
+    {
+      "id": 314,
+      "text": "Puberty."
+    },
+    {
+      "id": 315,
+      "text": "A disappointing birthday party."
+    },
+    {
+      "id": 316,
+      "text": "An erection that lasts longer than four hours."
+    },
+    {
+      "id": 317,
+      "text": "White privilege."
+    },
+    {
+      "id": 318,
+      "text": "Getting so angry that you pop a boner."
+    },
+    {
+      "id": 319,
+      "text": "Wifely duties."
+    },
+    {
+      "id": 320,
+      "text": "Two midgets shitting into a bucket."
+    },
+    {
+      "id": 321,
+      "text": "Queefing."
+    },
+    {
+      "id": 322,
+      "text": "Wiping her butt."
+    },
+    {
+      "id": 323,
+      "text": "Golden showers."
+    },
+    {
+      "id": 324,
+      "text": "Barack Obama."
+    },
+    {
+      "id": 325,
+      "text": "Nazis."
+    },
+    {
+      "id": 326,
+      "text": "A robust mongoloid."
+    },
+    {
+      "id": 327,
+      "text": "An M. Night Shyamalan plot twist."
+    },
+    {
+      "id": 328,
+      "text": "Getting drunk on mouthwash."
+    },
+    {
+      "id": 329,
+      "text": "Lunchables™."
+    },
+    {
+      "id": 330,
+      "text": "Women in yogurt commercials."
+    },
+    {
+      "id": 331,
+      "text": "John Wilkes Booth."
+    },
+    {
+      "id": 332,
+      "text": "Powerful thighs."
+    },
+    {
+      "id": 333,
+      "text": "Mr. Clean, right behind you."
+    },
+    {
+      "id": 334,
+      "text": "Multiple stab wounds."
+    },
+    {
+      "id": 335,
+      "text": "Cybernetic enhancements."
+    },
+    {
+      "id": 336,
+      "text": "Serfdom."
+    },
+    {
+      "id": 337,
+      "text": "Kanye West."
+    },
+    {
+      "id": 338,
+      "text": "Women's suffrage."
+    },
+    {
+      "id": 339,
+      "text": "Children on leashes."
+    },
+    {
+      "id": 340,
+      "text": "Harry Potter erotica."
+    },
+    {
+      "id": 341,
+      "text": "The Dance of the Sugar Plum Fairy."
+    },
+    {
+      "id": 342,
+      "text": "Lance Armstrong's missing testicle."
+    },
+    {
+      "id": 343,
+      "text": "Parting the Red Sea."
+    },
+    {
+      "id": 344,
+      "text": "The Amish."
+    },
+    {
+      "id": 345,
+      "text": "Dead babies."
+    },
+    {
+      "id": 346,
+      "text": "Child beauty pageants."
+    },
+    {
+      "id": 347,
+      "text": "AXE Body Spray."
+    },
+    {
+      "id": 348,
+      "text": "Centaurs."
+    },
+    {
+      "id": 349,
+      "text": "Copping a feel."
+    },
+    {
+      "id": 350,
+      "text": "Grandma."
+    },
+    {
+      "id": 351,
+      "text": "Famine."
+    },
+    {
+      "id": 352,
+      "text": "The Trail of Tears."
+    },
+    {
+      "id": 353,
+      "text": "The miracle of childbirth."
+    },
+    {
+      "id": 354,
+      "text": "Finger painting."
+    },
+    {
+      "id": 355,
+      "text": "A monkey smoking a cigar."
+    },
+    {
+      "id": 356,
+      "text": "The Make-A-Wish® Foundation."
+    },
+    {
+      "id": 357,
+      "text": "Anal beads."
+    },
+    {
+      "id": 358,
+      "text": "The Force."
+    },
+    {
+      "id": 359,
+      "text": "Kamikaze pilots."
+    },
+    {
+      "id": 360,
+      "text": "Dry heaving."
+    },
+    {
+      "id": 361,
+      "text": "Active listening."
+    },
+    {
+      "id": 362,
+      "text": "Ghosts."
+    },
+    {
+      "id": 363,
+      "text": "The Hustle."
+    },
+    {
+      "id": 364,
+      "text": "Peeing a little bit."
+    },
+    {
+      "id": 365,
+      "text": "Another goddamn vampire movie."
+    },
+    {
+      "id": 366,
+      "text": "Shapeshifters."
+    },
+    {
+      "id": 367,
+      "text": "The Care Bear Stare."
+    },
+    {
+      "id": 368,
+      "text": "Hot cheese."
+    },
+    {
+      "id": 369,
+      "text": "A mopey zoo lion."
+    },
+    {
+      "id": 370,
+      "text": "A defective condom."
+    },
+    {
+      "id": 371,
+      "text": "Teenage pregnancy."
+    },
+    {
+      "id": 372,
+      "text": "A Bop It™."
+    },
+    {
+      "id": 373,
+      "text": "Expecting a burp and vomiting on the floor."
+    },
+    {
+      "id": 374,
+      "text": "Horrifying laser hair removal accidents."
+    },
+    {
+      "id": 375,
+      "text": "Boogers."
+    },
+    {
+      "id": 376,
+      "text": "Unfathomable stupidity."
+    },
+    {
+      "id": 377,
+      "text": "Breaking out into song and dance."
+    },
+    {
+      "id": 378,
+      "text": "Soup that is too hot."
+    },
+    {
+      "id": 379,
+      "text": "Morgan Freeman's voice."
+    },
+    {
+      "id": 380,
+      "text": "Getting naked and watching Nickelodeon."
+    },
+    {
+      "id": 381,
+      "text": "MechaHitler."
+    },
+    {
+      "id": 382,
+      "text": "Flying sex snakes."
+    },
+    {
+      "id": 383,
+      "text": "The true meaning of Christmas."
+    },
+    {
+      "id": 384,
+      "text": "My inner demons."
+    },
+    {
+      "id": 385,
+      "text": "Pac-Man uncontrollably guzzling cum."
+    },
+    {
+      "id": 386,
+      "text": "My vagina."
+    },
+    {
+      "id": 387,
+      "text": "A homoerotic volleyball montage."
+    },
+    {
+      "id": 388,
+      "text": "Actually taking candy from a baby."
+    },
+    {
+      "id": 389,
+      "text": "Crystal meth."
+    },
+    {
+      "id": 390,
+      "text": "Exactly what you'd expect."
+    },
+    {
+      "id": 391,
+      "text": "Natural male enhancement."
+    },
+    {
+      "id": 392,
+      "text": "Passive-aggressive Post-it notes."
+    },
+    {
+      "id": 393,
+      "text": "Inappropriate yodeling."
+    },
+    {
+      "id": 394,
+      "text": "Lady Gaga."
+    },
+    {
+      "id": 395,
+      "text": "The Little Engine That Could."
+    },
+    {
+      "id": 396,
+      "text": "Vigilante justice."
+    },
+    {
+      "id": 397,
+      "text": "A death ray."
+    },
+    {
+      "id": 398,
+      "text": "Poor life choices."
+    },
+    {
+      "id": 399,
+      "text": "A gentle caress of the inner thigh."
+    },
+    {
+      "id": 400,
+      "text": "Embryonic stem cells."
+    },
+    {
+      "id": 401,
+      "text": "Nicolas Cage."
+    },
+    {
+      "id": 402,
+      "text": "Firing a rifle into the air while balls deep in a squealing hog."
+    },
+    {
+      "id": 403,
+      "text": "Switching to Geico®."
+    },
+    {
+      "id": 404,
+      "text": "The chronic."
+    },
+    {
+      "id": 405,
+      "text": "Erectile dysfunction."
+    },
+    {
+      "id": 406,
+      "text": "Home video of Oprah sobbing into a Lean Cuisine®."
+    },
+    {
+      "id": 407,
+      "text": "A bucket of fish heads."
+    },
+    {
+      "id": 408,
+      "text": "50,000 volts straight to the nipples."
+    },
+    {
+      "id": 409,
+      "text": "Being fat and stupid."
+    },
+    {
+      "id": 410,
+      "text": "Hospice care."
+    },
+    {
+      "id": 411,
+      "text": "A pyramid of severed heads."
+    },
+    {
+      "id": 412,
+      "text": "Getting married, having a few kids, buying some stuff, retiring to Florida, and dying."
+    },
+    {
+      "id": 413,
+      "text": "A subscription to Men's Fitness."
+    },
+    {
+      "id": 414,
+      "text": "Crucifixion."
+    },
+    {
+      "id": 415,
+      "text": "A micropig wearing a tiny raincoat and booties."
+    },
+    {
+      "id": 416,
+      "text": "Some god-damn peace and quiet."
+    },
+    {
+      "id": 417,
+      "text": "Used panties."
+    },
+    {
+      "id": 418,
+      "text": "A tribe of warrior women."
+    },
+    {
+      "id": 419,
+      "text": "The penny whistle solo from \"My Heart Will Go On.\""
+    },
+    {
+      "id": 420,
+      "text": "An oversized lollipop."
+    },
+    {
+      "id": 421,
+      "text": "Helplessly giggling at the mention of Hutus and Tutsis."
+    },
+    {
+      "id": 422,
+      "text": "Not wearing pants."
+    },
+    {
+      "id": 423,
+      "text": "Consensual sex."
+    },
+    {
+      "id": 424,
+      "text": "Her Majesty, Queen Elizabeth II."
+    },
+    {
+      "id": 425,
+      "text": "Funky fresh rhymes."
+    },
+    {
+      "id": 426,
+      "text": "The art of seduction."
+    },
+    {
+      "id": 427,
+      "text": "The Devil himself."
+    },
+    {
+      "id": 428,
+      "text": "Advice from a wise, old black man."
+    },
+    {
+      "id": 429,
+      "text": "Destroying the evidence."
+    },
+    {
+      "id": 430,
+      "text": "The light of a billion suns."
+    },
+    {
+      "id": 431,
+      "text": "Wet dreams."
+    },
+    {
+      "id": 432,
+      "text": "Synergistic management solutions."
+    },
+    {
+      "id": 433,
+      "text": "Growing a pair."
+    },
+    {
+      "id": 434,
+      "text": "Silence."
+    },
+    {
+      "id": 435,
+      "text": "An M16 assault rifle."
+    },
+    {
+      "id": 436,
+      "text": "Poopy diapers."
+    },
+    {
+      "id": 437,
+      "text": "A live studio audience."
+    },
+    {
+      "id": 438,
+      "text": "The Great Depression."
+    },
+    {
+      "id": 439,
+      "text": "A spastic nerd."
+    },
+    {
+      "id": 440,
+      "text": "Rush Limbaugh's soft, shitty body."
+    },
+    {
+      "id": 441,
+      "text": "Tickling Sean Hannity, even after he tells you to stop."
+    },
+    {
+      "id": 442,
+      "text": "Stalin."
+    },
+    {
+      "id": 443,
+      "text": "Brown people."
+    },
+    {
+      "id": 444,
+      "text": "Rehab."
+    },
+    {
+      "id": 445,
+      "text": "Capturing Newt Gingrich and forcing him to dance in a monkey suit."
+    },
+    {
+      "id": 446,
+      "text": "Battlefield amputations."
+    },
+    {
+      "id": 447,
+      "text": "An uppercut."
+    },
+    {
+      "id": 448,
+      "text": "Shiny objects."
+    },
+    {
+      "id": 449,
+      "text": "An ugly face."
+    },
+    {
+      "id": 450,
+      "text": "Menstrual rage."
+    },
+    {
+      "id": 451,
+      "text": "A bitch slap."
+    },
+    {
+      "id": 452,
+      "text": "One trillion dollars."
+    },
+    {
+      "id": 453,
+      "text": "Chunks of dead prostitute."
+    },
+    {
+      "id": 454,
+      "text": "The entire Mormon Tabernacle Choir."
+    },
+    {
+      "id": 455,
+      "text": "The female orgasm."
+    },
+    {
+      "id": 456,
+      "text": "Extremely tight pants."
+    },
+    {
+      "id": 457,
+      "text": "The Boy Scouts of America."
+    },
+    {
+      "id": 458,
+      "text": "Stormtroopers."
+    },
+    {
+      "id": 459,
+      "text": "Throwing a virgin into a volcano."
+    }
+  ]
+}
