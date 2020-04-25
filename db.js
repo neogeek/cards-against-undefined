@@ -34,14 +34,7 @@ const createRoom = userId => {
         turns: []
     };
 
-    room.turns.push({
-        dealerUserId: userId,
-        blackCard: room.deck.blackCards
-            .splice(0, MAX_CARDS_IN_HAND)
-            .find(val => val),
-        playedCards: [],
-        winningCards: []
-    });
+    room.turns.push(createTurn(room, userId));
 
     rooms.push(room);
 
@@ -76,6 +69,21 @@ const findUser = (room, userId) => {
     return user;
 };
 
+const createTurn = (room, userId) => {
+    const turn = {
+        dealerUserId: userId,
+        blackCard: room.deck.blackCards
+            .splice(0, MAX_CARDS_IN_HAND)
+            .find(val => val),
+        playedCards: [],
+        winningCards: []
+    };
+
+    room.turns.push(turn);
+
+    return turn;
+};
+
 const findTurn = room => {
     if (!room) {
         return null;
@@ -99,14 +107,7 @@ const findTurn = room => {
             nextUser = room.players[0];
         }
 
-        turn = {
-            dealerUserId: nextUser.userId,
-            blackCard: room.deck.blackCards
-                .splice(0, MAX_CARDS_IN_HAND)
-                .find(val => val),
-            playedCards: [],
-            winningCards: []
-        };
+        const turn = createTurn(room, nextUser.userId);
 
         room.players.map(player =>
             player.hand.push(
@@ -125,6 +126,7 @@ const findTurn = room => {
 
 module.exports = {
     createRoom,
+    createTurn,
     findRoom,
     findUser,
     findTurn
