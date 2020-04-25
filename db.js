@@ -48,8 +48,7 @@ const createRoom = userId => {
     return room;
 };
 
-const findRoom = (roomId = createUniqueRoomId()) =>
-    rooms.find(room => room.roomId === roomId);
+const findRoom = roomId => rooms.find(room => room.roomId === roomId);
 
 const findUser = (room, userId) => {
     if (!room) {
