@@ -26,17 +26,20 @@ export const RoomWrapper = withRouter(({ history, children }) => {
     const handleMessage = message => setData(JSON.parse(message.data));
 
     useEffect(() => {
-        if (data.roomId) {
-            setRoomId(data.roomId);
+        if (data.room && data.room.roomId) {
+            setRoomId(data.room.roomId);
         }
 
-        if (!data.roomId) {
+        if (!data.room || !data.room.roomId) {
             history.push(`/`);
-        } else if (!data.started) {
+        } else if (!data.room.started) {
             history.push(`/lobby`);
-        } else if (data.dealerSelect) {
+        } else if (
+            data.turn.playedCards.length ===
+            data.room.players.length - 1
+        ) {
             history.push(`/dealer-choice`);
-        } else if (!data.dealerSelect) {
+        } else {
             history.push(`/game`);
         }
     }, [data]);

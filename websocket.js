@@ -13,12 +13,13 @@ const sendClientUpdate = ({ roomId, userId }) => {
 
     if (user && turn) {
         return {
-            roomId: room.roomId,
-            started: room.started,
-            playerCount: room.players.length,
-            dealerSelect: turn.playedCards.length === room.players.length - 1,
-            isAdmin: user.userId === room.adminUserId,
-            isDealer: user.userId === turn.dealerUserId,
+            room: {
+                roomId: room.roomId,
+                adminUserId: room.adminUserId,
+                started: room.started,
+                players: room.players,
+                spectators: room.spectators
+            },
             user,
             turn
         };

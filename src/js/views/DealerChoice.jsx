@@ -10,7 +10,9 @@ import { websocket } from '../utils/websocket';
 
 export default () => {
     const {
-        data: { isDealer, turn: { blackCard = [], playedCards = [] } = {} } = {
+        data: {
+            turn: { dealerUserId, blackCard = [], playedCards = [] } = {}
+        } = {
             turn
         },
         roomId,
@@ -46,7 +48,7 @@ export default () => {
                                     ))}
                                 </CardLayout>
 
-                                {isDealer && (
+                                {dealerUserId === userId && (
                                     <Button
                                         onClick={() => {
                                             websocket.send(
