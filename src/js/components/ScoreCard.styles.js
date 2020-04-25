@@ -5,8 +5,9 @@ export const StyledScoreIcon = styled.div`
 `;
 export const StyledScoreText = styled.span`
     position: absolute;
-    bottom: 16px;
-    right: 4px;
+    margin: 0.25rem;
+    bottom: 13px;
+    right: 0;
     width: 35px;
     height: 30px;
     color: #fff;
