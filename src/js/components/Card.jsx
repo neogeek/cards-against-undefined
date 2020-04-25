@@ -5,6 +5,7 @@ import {
     StyledCardHeader,
     StyledCardIndex,
     StyledCardText,
+    StyledCardDescription,
     StyledCardFooter,
     StyledCardFooterLogo
 } from './Card.styles';
@@ -22,6 +23,7 @@ const types = {
 
 const CardFront = ({
     text = 'undefined',
+    description = '',
     type = 'white',
     onClick,
     disabled = false,
@@ -39,6 +41,7 @@ const CardFront = ({
                     __html: text.replace(/_/g, '__________')
                 }}
             ></StyledCardText>
+            <StyledCardDescription>{description}</StyledCardDescription>
             <StyledCardFooter>
                 <StyledCardFooterLogo src="/images/logo.svg" width="25" />
                 Cards Against Undefined

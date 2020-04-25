@@ -42,8 +42,15 @@ export const StyledCardIndex = styled.span`
 `;
 
 export const StyledCardText = styled.p`
+    flex: 1;
     font-size: 1.5rem;
     font-weight: bold;
+`;
+
+export const StyledCardDescription = styled.p`
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    font-style: italic;
 `;
 
 export const StyledCardFooter = styled.div`
