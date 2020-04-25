@@ -1,12 +1,6 @@
 import React, { useContext, useState } from 'react';
 
-import {
-    Button,
-    CardFront,
-    CardLayout,
-    PageHeader,
-    PageWrapper
-} from '../components';
+import { Button, CardFront, CardLayout, PageWrapper } from '../components';
 
 import { RoomHeader } from './';
 
