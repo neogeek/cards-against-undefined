@@ -1,7 +1,6 @@
 rooms:
   roomId: int
   started: bool
-  dealerIndex: int
   players: [user]
   spectators: [user]
   deck:
@@ -10,7 +9,7 @@ rooms:
   turns: [turn]
 
 turn:
-  userId: int
+  dealerUserId: int
   blackCard: card
   playedCards: [[playedCard]]
   winningCards: [card]

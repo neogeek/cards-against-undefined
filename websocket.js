@@ -17,10 +17,7 @@ const sendClientUpdate = ({ roomId, userId }) => {
             started: room.started,
             playerCount: room.players.length,
             dealerSelect: turn.playedCards.length === room.players.length - 1,
-            isDealer:
-                room.players.findIndex(
-                    player => player.userId === user.userId
-                ) === room.dealerIndex,
+            isDealer: user.userId === turn.dealerUserId,
             user,
             turn
         };
@@ -50,7 +47,7 @@ const websocket = ({ port, server }) => {
         switch (type) {
             case 'create':
                 {
-                    const room = createRoom();
+                    const room = createRoom(userId);
                     const user = findUser(room, userId);
 
                     client.userId = user.userId;

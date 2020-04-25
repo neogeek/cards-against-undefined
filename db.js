@@ -20,11 +20,10 @@ const createUniqueRoomId = () => {
     return roomId;
 };
 
-const createRoom = () => {
+const createRoom = userId => {
     const room = {
         roomId: createUniqueRoomId(),
         started: false,
-        dealerIndex: -1,
         players: [],
         spectators: [],
         deck: {
@@ -33,6 +32,15 @@ const createRoom = () => {
         },
         turns: []
     };
+
+    room.turns.push({
+        dealerUserId: userId,
+        blackCard: room.deck.blackCards
+            .splice(0, MAX_CARDS_IN_HAND)
+            .find(val => val),
+        playedCards: [],
+        winningCards: []
+    });
 
     rooms.push(room);
 
@@ -80,14 +88,19 @@ const findTurn = room => {
     );
 
     if (!turn) {
-        room.dealerIndex += 1;
+        const previousUserIndex = room.players.findIndex(
+            user =>
+                user.userId === room.turns[room.turns.length - 1].dealerUserId
+        );
 
-        if (room.dealerIndex >= room.players.length) {
-            room.dealerIndex = 0;
+        let nextUser = room.players[previousUserIndex + 1];
+
+        if (!nextUser) {
+            nextUser = room.players[0];
         }
 
         turn = {
-            usedId: room.players[room.dealerIndex].userId,
+            dealerUserId: nextUser.userId,
             blackCard: room.deck.blackCards
                 .splice(0, MAX_CARDS_IN_HAND)
                 .find(val => val),
