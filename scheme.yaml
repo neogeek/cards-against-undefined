@@ -1,5 +1,6 @@
 rooms:
   roomId: int
+  adminUserId: int
   started: bool
   players: [user]
   spectators: [user]

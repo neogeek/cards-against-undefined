@@ -10,7 +10,7 @@ import { sendJSON } from '../utils/websocket';
 
 export default () => {
     const {
-        data: { playerCount },
+        data: { isAdmin, playerCount },
         roomId,
         userId
     } = useContext(RoomContext);
@@ -21,14 +21,16 @@ export default () => {
             <PageWrapper>
                 <div>
                     <p>Waiting for other players ... {playerCount}</p>
-                    <Button
-                        onClick={e => {
-                            e.preventDefault();
-                            sendJSON({ type: 'start', roomId, userId });
-                        }}
-                    >
-                        Everyone is in →
-                    </Button>
+                    {isAdmin && (
+                        <Button
+                            onClick={e => {
+                                e.preventDefault();
+                                sendJSON({ type: 'start', roomId, userId });
+                            }}
+                        >
+                            Everyone is in →
+                        </Button>
+                    )}
                 </div>
             </PageWrapper>
         </>

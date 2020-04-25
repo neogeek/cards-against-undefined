@@ -23,6 +23,7 @@ const createUniqueRoomId = () => {
 const createRoom = userId => {
     const room = {
         roomId: createUniqueRoomId(),
+        adminUserId: userId,
         started: false,
         players: [],
         spectators: [],

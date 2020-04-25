@@ -17,6 +17,7 @@ const sendClientUpdate = ({ roomId, userId }) => {
             started: room.started,
             playerCount: room.players.length,
             dealerSelect: turn.playedCards.length === room.players.length - 1,
+            isAdmin: user.userId === room.adminUserId,
             isDealer: user.userId === turn.dealerUserId,
             user,
             turn
