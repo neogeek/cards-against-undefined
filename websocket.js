@@ -50,7 +50,7 @@ const websocket = ({ port, server }) => {
         switch (type) {
             case 'create':
                 {
-                    const room = createRoom(roomId);
+                    const room = createRoom();
                     const user = findUser(room, userId);
 
                     client.userId = user.userId;
