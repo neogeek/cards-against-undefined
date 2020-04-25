@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const StyledCard = styled.div`
     position: relative;
     margin: 0.25rem;
-    font-weight: bold;
     padding: 1.5rem;
     flex-shrink: 0;
     display: inline-flex;
@@ -49,6 +48,7 @@ export const StyledCardText = styled.p`
 
 export const StyledCardFooter = styled.div`
     font-size: 1.1rem;
+    font-weight: bold;
 `;
 
 export const StyledCardFooterLogo = styled.img`
