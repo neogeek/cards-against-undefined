@@ -9,4 +9,14 @@ const generateRandomString = (length = 4) =>
         )
         .join('');
 
-module.exports = { generateRandomString };
+const removeArrayItem = (array, filter) => {
+    const itemIndex = array.findIndex(filter);
+
+    if (itemIndex !== -1) {
+        array.splice(itemIndex, 1);
+        return true;
+    }
+    return false;
+};
+
+module.exports = { generateRandomString, removeArrayItem };

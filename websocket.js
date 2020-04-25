@@ -2,6 +2,8 @@ const WebSocketEventWrapper = require('@neogeek/websocket-event-wrapper');
 
 const qs = require('qs');
 
+const { removeArrayItem } = require('./utils');
+
 const { createRoom, findRoom, findUser, findTurn } = require('./db');
 
 const sendClientUpdate = ({ roomId, userId }) => {
@@ -29,16 +31,6 @@ const sendClientUpdate = ({ roomId, userId }) => {
 
 const broadcastRoomUpdate = (roomId, wss) => {
     wss.broadcast(sendClientUpdate, client => client.roomId === roomId);
-};
-
-const removeArrayItem = (array, filter) => {
-    const itemIndex = array.findIndex(filter);
-
-    if (itemIndex !== -1) {
-        array.splice(itemIndex, 1);
-        return true;
-    }
-    return false;
 };
 
 const websocket = ({ port, server }) => {
