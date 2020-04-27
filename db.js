@@ -72,9 +72,7 @@ const findUser = (room, userId) => {
 const createTurn = (room, userId) => {
     const turn = {
         dealerUserId: userId,
-        blackCard: room.deck.blackCards
-            .splice(0, MAX_CARDS_IN_HAND)
-            .find(val => val),
+        blackCard: room.deck.blackCards.splice(0, 1).find(val => val),
         playedCards: [],
         winningCards: []
     };
