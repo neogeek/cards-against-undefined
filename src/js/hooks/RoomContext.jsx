@@ -32,7 +32,6 @@ export const RoomWrapper = withRouter(({ history, children }) => {
     useEffect(() => {
         setGameLobby(
             new WebSocketGameLobbyClient({
-                port: 5000,
                 gameId: gameCode,
                 playerId
             })
