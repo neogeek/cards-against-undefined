@@ -6,29 +6,33 @@ import { RoomContext } from '../hooks';
 
 import { Button, RoomCode, RoomHeader, ScoreCard } from '../components';
 
-import { sendJSON } from '../utils/websocket';
-
 export default () => {
     const {
-        data: { started, user: { blackCards = [] } = {} } = { user },
-        roomId,
-        userId
+        data: {
+            game: { started = false } = {},
+            player: { blackCards = [] } = {}
+        } = {
+            game,
+            player
+        },
+        gameCode,
+        playerId,
+        send
     } = useContext(RoomContext);
 
-    const [_, setRoomId] = useLocalStorage('roomId');
+    const [, setGameCode] = useLocalStorage('gameCode');
 
     return (
         <RoomHeader>
-            <RoomCode>{roomId}</RoomCode>
+            <RoomCode>{gameCode}</RoomCode>
             {started && <ScoreCard>{blackCards.length}</ScoreCard>}
             <Button
                 onClick={() => {
-                    sendJSON({
-                        type: 'leave',
-                        roomId,
-                        userId
+                    send('leave', {
+                        gameId: gameCode,
+                        playerId
                     });
-                    setRoomId('');
+                    setGameCode('');
                 }}
             >
                 Leave Game

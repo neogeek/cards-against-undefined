@@ -8,13 +8,15 @@ import { useLocalStorage } from '@neogeek/common-react-hooks';
 
 import { Reconnecting } from '../views';
 
-import { connect, websocket, sendJSON } from '../utils/websocket';
+import { WebSocketGameLobbyClient } from 'websocket-game-lobby';
 
 export const RoomContext = createContext();
 
 export const RoomWrapper = withRouter(({ history, children }) => {
-    const [userId] = useLocalStorage('userId', uuid);
-    const [roomId, setRoomId] = useLocalStorage('roomId');
+    const [gameLobby, setGameLobby] = useState();
+
+    const [playerId] = useLocalStorage('playerId', uuid);
+    const [gameCode, setGameCode] = useLocalStorage('gameCode');
 
     const [data, setData] = useState({});
 
@@ -23,48 +25,59 @@ export const RoomWrapper = withRouter(({ history, children }) => {
     const handleConnect = () => setConnected(true);
     const handleDisconnect = () => setConnected(false);
 
-    const handleMessage = message => setData(JSON.parse(message.data));
+    const handleMessage = message => {
+        setData(JSON.parse(message.data));
+    };
 
     useEffect(() => {
-        if (data.room && data.room.roomId) {
-            setRoomId(data.room.roomId);
-        }
+        setGameLobby(
+            new WebSocketGameLobbyClient({
+                port: 5000,
+                gameId: gameCode,
+                playerId
+            })
+        );
+    }, []);
 
-        if (!data.room || !data.room.roomId) {
-            history.push(`/`);
-        } else if (!data.room.started) {
-            history.push(`/lobby`);
-        } else if (
-            data.turn.playedCards.length ===
-            data.room.players.length - 1
-        ) {
-            history.push(`/dealer-choice`);
+    useEffect(() => {
+        if (data.game) {
+            setGameCode(data?.game?.gameCode || '');
+            if (!data.game.started) {
+                history.push(`/lobby`);
+            } else if (
+                data.turn.playedCards.length ===
+                data.game.players.length - 1
+            ) {
+                history.push(`/dealer-choice`);
+            } else {
+                history.push(`/game`);
+            }
         } else {
-            history.push(`/game`);
+            history.push(`/`);
         }
     }, [data]);
 
     useEffect(() => {
-        if (connected && roomId) {
-            sendJSON({ type: 'update', userId, roomId });
-        }
-    }, [connected]);
+        gameLobby?.addEventListener('open', handleConnect);
+        gameLobby?.addEventListener('message', handleMessage);
+        gameLobby?.addEventListener('close', handleDisconnect);
 
-    useEffect(() => {
-        connect({ userId, roomId });
-
-        websocket.addEventListener('open', handleConnect);
-        websocket.addEventListener('message', handleMessage);
-        websocket.addEventListener('close', handleDisconnect);
         return () => {
-            websocket.removeEventListener('open', handleConnect);
-            websocket.removeEventListener('message', handleMessage);
-            websocket.removeEventListener('close', handleDisconnect);
+            gameLobby?.removeEventListener('open', handleConnect);
+            gameLobby?.removeEventListener('message', handleMessage);
+            gameLobby?.removeEventListener('close', handleDisconnect);
         };
-    }, []);
+    }, [gameLobby]);
 
     return (
-        <RoomContext.Provider value={{ connected, data, roomId, userId }}>
+        <RoomContext.Provider
+            value={{
+                data,
+                gameCode,
+                playerId,
+                send: (type, data) => gameLobby?.send(type, data)
+            }}
+        >
             {connected ? children : <Reconnecting />}
         </RoomContext.Provider>
     );

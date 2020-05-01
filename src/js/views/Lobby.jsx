@@ -6,31 +6,26 @@ import { RoomHeader } from './';
 
 import { Button, PageWrapper } from '../components';
 
-import { sendJSON } from '../utils/websocket';
-
 export default () => {
-    const {
-        data: { room: { adminUserId, players = [] } = {} },
-        roomId,
-        userId
-    } = useContext(RoomContext);
+    const { data, gameCode, playerId, send } = useContext(RoomContext);
 
     return (
         <>
             <RoomHeader />
             <PageWrapper>
                 <div>
-                    <p>Waiting for other players ... {players.length}</p>
-                    {userId === adminUserId && (
-                        <Button
-                            onClick={e => {
-                                e.preventDefault();
-                                sendJSON({ type: 'start', roomId, userId });
-                            }}
-                        >
-                            Everyone is in →
-                        </Button>
-                    )}
+                    <p>
+                        Waiting for other players ...{' '}
+                        {data?.game?.players.length || 0}
+                    </p>
+                    <Button
+                        onClick={e => {
+                            e.preventDefault();
+                            send('start', { gameId: gameCode, playerId });
+                        }}
+                    >
+                        Everyone is in →
+                    </Button>
                 </div>
             </PageWrapper>
         </>
