@@ -1,148 +1,134 @@
-const WebSocketEventWrapper = require('@neogeek/websocket-event-wrapper');
+const { WebSocketGameLobbyServer } = require('websocket-game-lobby');
 
-const qs = require('qs');
+const shuffle = require('shuffle-array');
+
+const deck = require('./data/base');
 
 const { removeArrayItem } = require('./utils');
 
-const { createRoom, findRoom, findUser, findTurn } = require('./db');
+const MAX_CARDS_IN_HAND = 5;
 
-const sendClientUpdate = ({ roomId, userId }) => {
-    const room = findRoom(roomId);
-    const user = findUser(room, userId);
-    const turn = findTurn(room);
+const setupGame = game => {
+    game.dealerPlayerId = null;
 
-    if (user && turn) {
-        return {
-            room: {
-                roomId: room.roomId,
-                adminUserId: room.adminUserId,
-                started: room.started,
-                players: room.players,
-                spectators: room.spectators
-            },
-            user,
-            turn
-        };
-    }
-
-    return {};
+    return Object.defineProperties(game, {
+        deck: {
+            value: {
+                blackCards: shuffle([...deck.blackCards]),
+                whiteCards: shuffle([...deck.whiteCards])
+            }
+        }
+    });
 };
 
-const broadcastRoomUpdate = (roomId, wss) => {
-    wss.broadcast(sendClientUpdate, client => client.roomId === roomId);
+const removePlayedCardsFromPlayer = (player, playedCards) => {
+    playedCards.map(({ id }) =>
+        removeArrayItem(player.hand, card => card.id === id)
+    );
+    return player;
+};
+
+const setupPlayersInGame = game => {
+    game.players.map(player => {
+        if (!player.hasOwnProperty('hand')) {
+            player.hand = [];
+        }
+        if (!player.hasOwnProperty('blackCards')) {
+            player.blackCards = [];
+        }
+
+        player.hand.push(
+            ...game.deck.whiteCards.splice(
+                0,
+                MAX_CARDS_IN_HAND - player.hand.length
+            )
+        );
+    });
+    return game;
+};
+
+const setupCurrentTurn = (game, turn) => {
+    if (!turn.hasOwnProperty('blackCard')) {
+        turn.blackCard = game.deck.blackCards.splice(0, 1).find(val => val);
+    }
+    if (!turn.hasOwnProperty('playedCards')) {
+        turn.playedCards = [];
+    }
+    if (!turn.hasOwnProperty('winningCards')) {
+        turn.winningCards = [];
+    }
+
+    const previousPlayerIndex = game.players.findIndex(
+        player => player.playerId === game.dealerPlayerId
+    );
+
+    const nextPlayerIndex =
+        previousPlayerIndex + 1 < game.players.length
+            ? previousPlayerIndex + 1
+            : 0;
+
+    turn.dealerPlayerId = game.players[nextPlayerIndex].playerId;
+    game.dealerPlayerId = game.players[nextPlayerIndex].playerId;
+
+    return turn;
 };
 
 const websocket = ({ port, server }) => {
-    const wss = new WebSocketEventWrapper({
-        port,
-        server,
-        onConnect: (_, request) => {
-            sendClientUpdate(
-                qs.parse(request.url.replace(/^\//, ''), {
-                    ignoreQueryPrefix: true
-                })
+    const gameLobby = new WebSocketGameLobbyServer({ port, server });
+
+    gameLobby.addEventListener('start', ({ gameId }, datastore) => {
+        datastore.editGame(gameId, setupGame);
+        datastore.editGame(gameId, setupPlayersInGame);
+
+        datastore.editGame(gameId, game => {
+            setupCurrentTurn(game, datastore.currentTurn(gameId));
+        });
+    });
+    gameLobby.addEventListener(
+        'play-cards',
+        ({ gameId, playerId, playedCards }, datastore) => {
+            datastore.editPlayer(gameId, playerId, player =>
+                removePlayedCardsFromPlayer(player, playedCards)
+            );
+
+            datastore.editTurn(
+                gameId,
+                datastore.currentTurn(gameId).turnId,
+                turn => {
+                    turn.playedCards.push({
+                        playerId,
+                        whiteCards: playedCards
+                    });
+                }
             );
         }
-    });
+    );
+    gameLobby.addEventListener(
+        'dealer-select',
+        ({ gameId, winningPlayerId, winningCards }, datastore) => {
+            datastore.editGame(gameId, setupPlayersInGame);
 
-    wss.addListener(({ roomId, userId, type, ...rest }, client) => {
-        switch (type) {
-            case 'create':
-                {
-                    const room = createRoom(userId);
-                    const user = findUser(room, userId);
+            datastore.editPlayer(gameId, winningPlayerId, player => {
+                player.blackCards.push(datastore.currentTurn(gameId).blackCard);
+            });
 
-                    client.userId = user.userId;
-                    client.roomId = room.roomId;
-
-                    broadcastRoomUpdate(room.roomId, wss);
+            datastore.editTurn(
+                gameId,
+                datastore.currentTurn(gameId).turnId,
+                turn => {
+                    turn.winningCards = winningCards;
                 }
-                break;
-            case 'join':
-            case 'update':
-                {
-                    const room = findRoom(roomId);
-                    const user = findUser(room, userId);
+            );
 
-                    if (!room || !user) {
-                        client.roomId = '';
+            datastore.endTurn(gameId);
 
-                        wss.send({}, client);
-
-                        break;
-                    }
-
-                    client.userId = user.userId;
-                    client.roomId = room.roomId;
-
-                    broadcastRoomUpdate(room.roomId, wss);
-                }
-                break;
-
-            case 'start':
-                {
-                    const room = findRoom(roomId);
-
-                    room.started = true;
-
-                    broadcastRoomUpdate(room.roomId, wss);
-                }
-                break;
-
-            case 'play-cards':
-                {
-                    const room = findRoom(roomId);
-                    const user = findUser(room, userId);
-                    const turn = findTurn(room);
-
-                    rest.playedCards.map(({ id }) =>
-                        removeArrayItem(user.hand, card => card.id === id)
-                    );
-
-                    turn.playedCards.push({
-                        userId,
-                        whiteCards: rest.playedCards
-                    });
-
-                    broadcastRoomUpdate(room.roomId, wss);
-                }
-                break;
-
-            case 'dealer-select':
-                {
-                    const room = findRoom(roomId);
-                    const turn = findTurn(room);
-                    const winningUser = findUser(room, rest.winningUserId);
-
-                    turn.winningCards = rest.winningCards;
-
-                    winningUser.blackCards.push(turn.blackCard);
-
-                    broadcastRoomUpdate(room.roomId, wss);
-                }
-                break;
-
-            case 'leave':
-                {
-                    const room = findRoom(roomId);
-
-                    removeArrayItem(
-                        room.players,
-                        user => user.userId === userId
-                    );
-
-                    client.roomId = '';
-
-                    wss.send({}, client);
-
-                    broadcastRoomUpdate(room.roomId, wss);
-                }
-                break;
-            default:
-                console.error('Invalid message type.');
-                break;
+            datastore.editTurn(
+                gameId,
+                datastore.currentTurn(gameId).turnId,
+                turn => setupCurrentTurn(datastore.findGame(gameId), turn)
+            );
         }
-    });
+    );
 };
 
 module.exports = websocket;

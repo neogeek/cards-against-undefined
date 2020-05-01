@@ -6,17 +6,19 @@ import { RoomHeader } from './';
 
 import { RoomContext } from '../hooks/RoomContext';
 
-import { sendJSON } from '../utils/websocket';
-
 export default () => {
     const {
         data: {
-            isDealer,
-            turn: { blackCard = [] } = {},
-            user: { hand = [] } = {}
-        } = { turn, user },
-        roomId,
-        userId
+            game: { gameId } = {},
+            turn: { blackCard = [], dealerPlayerId } = {},
+            player: { hand = [] } = {}
+        } = {
+            game,
+            turn,
+            player
+        },
+        playerId,
+        send
     } = useContext(RoomContext);
 
     const [selectedCards, setSelectedCards] = useState([]);
@@ -36,7 +38,7 @@ export default () => {
                         />
                     )}
                 </div>
-                {!isDealer && hand && (
+                {dealerPlayerId !== playerId && hand && (
                     <>
                         <CardLayout>
                             {hand.map(({ text, id }) => {
@@ -93,10 +95,9 @@ export default () => {
                                     hand.length < 5
                                 }
                                 onClick={() => {
-                                    sendJSON({
-                                        type: 'play-cards',
-                                        roomId,
-                                        userId,
+                                    send('play-cards', {
+                                        gameId,
+                                        playerId,
                                         playedCards: selectedCards
                                     });
                                     setSelectedCards([]);

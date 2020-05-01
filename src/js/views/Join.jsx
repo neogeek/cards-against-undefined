@@ -10,12 +10,10 @@ import {
     PageWrapper
 } from '../components';
 
-import { sendJSON } from '../utils/websocket';
-
 export default () => {
-    const { userId } = useContext(RoomContext);
+    const { playerId, send } = useContext(RoomContext);
 
-    const [roomId, setRoomId] = useState('');
+    const [gameCode, setGameCode] = useState('');
 
     return (
         <PageWrapper>
@@ -30,7 +28,7 @@ export default () => {
             <form
                 onSubmit={e => {
                     e.preventDefault();
-                    sendJSON({ type: 'create', userId });
+                    send('create', { playerId });
                 }}
             >
                 <Button type="submit">Create New Game</Button>
@@ -38,17 +36,17 @@ export default () => {
             <form
                 onSubmit={e => {
                     e.preventDefault();
-                    sendJSON({ type: 'join', roomId, userId });
+                    send('join', { gameId: gameCode, playerId });
                 }}
             >
                 <Input
                     type="text"
-                    placeholder="Room ID"
-                    value={roomId}
+                    placeholder="Code"
+                    value={gameCode}
                     size="8"
                     maxLength="4"
                     autoCorrect="false"
-                    onChange={e => setRoomId(e.target.value.toUpperCase())}
+                    onChange={e => setGameCode(e.target.value.toUpperCase())}
                 />
                 <Button type="submit">Join Game</Button>
             </form>

@@ -6,17 +6,17 @@ import { RoomHeader } from './';
 
 import { RoomContext } from '../hooks';
 
-import { websocket } from '../utils/websocket';
-
 export default () => {
     const {
         data: {
-            turn: { dealerUserId, blackCard = [], playedCards = [] } = {}
+            game: { gameId } = {},
+            turn: { blackCard = {}, playedCards = [], dealerPlayerId } = {}
         } = {
+            game,
             turn
         },
-        roomId,
-        userId
+        playerId,
+        send
     } = useContext(RoomContext);
 
     return (
@@ -36,7 +36,7 @@ export default () => {
                 </div>
                 {playedCards &&
                     playedCards.map(
-                        ({ userId: winningUserId, whiteCards }, index) => (
+                        ({ playerId: winningPlayerId, whiteCards }, index) => (
                             <Fragment key={index}>
                                 <CardLayout>
                                     {whiteCards.map(({ text, id }) => (
@@ -48,18 +48,16 @@ export default () => {
                                     ))}
                                 </CardLayout>
 
-                                {dealerUserId === userId && (
+                                {dealerPlayerId === playerId && (
                                     <Button
                                         onClick={() => {
-                                            websocket.send(
-                                                JSON.stringify({
-                                                    type: 'dealer-select',
-                                                    roomId,
-                                                    userId,
-                                                    winningUserId,
-                                                    winningCards: whiteCards
-                                                })
-                                            );
+                                            send('dealer-select', {
+                                                type: 'dealer-select',
+                                                gameId,
+                                                playerId,
+                                                winningPlayerId,
+                                                winningCards: whiteCards
+                                            });
                                         }}
                                     >
                                         Select Card(s)

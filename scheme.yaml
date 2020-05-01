@@ -1,29 +1,29 @@
-rooms:
-  roomId: int
-  adminUserId: int
-  started: bool
-  players: [user]
-  spectators: [user]
+game:
+  gameId: string
+  gameCode: string
+  started: boolean
+  players: [player]
+  spectators: [player]
+  turns: [turn]
   deck:
     blackCards: [card]
     whiteCards: [card]
-  turns: [turn]
 
-turn:
-  dealerUserId: int
-  blackCard: card
-  playedCards: [[playedCard]]
-  winningCards: [card]
-
-card:
-  id: int
-  text: string
-
-user:
-  userId: int
+player:
+  playerId: string
+  name: string
   hand: [card]
   blackCards: [card]
 
-playedCard:
-  userId: int
+turn:
+  turnId: string
+  blackCard: card
+  playedCards: [[playedCards]]
+  winningCards: [card]
+
+playedCards:
+  playerId: int
   whiteCards: [card]
+card:
+  id: int
+  text: string
