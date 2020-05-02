@@ -45,7 +45,7 @@ export default () => {
                     value={gameCode}
                     size="8"
                     maxLength="4"
-                    autoCorrect="false"
+                    autocorrect={false}
                     onChange={e => setGameCode(e.target.value.toUpperCase())}
                 />
                 <Button type="submit">Join Game</Button>
