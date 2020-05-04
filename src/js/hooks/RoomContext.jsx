@@ -2,8 +2,6 @@ import React, { createContext, useEffect, useState } from 'react';
 
 import { withRouter } from 'react-router-dom';
 
-import { v4 as uuid } from 'uuid';
-
 import { useLocalStorage } from '@neogeek/common-react-hooks';
 
 import { Reconnecting } from '../views';
@@ -15,7 +13,7 @@ export const RoomContext = createContext();
 export const RoomWrapper = withRouter(({ history, children }) => {
     const [gameLobby, setGameLobby] = useState();
 
-    const [playerId] = useLocalStorage('playerId', uuid);
+    const [playerId, setPlayerId] = useLocalStorage('playerId');
     const [gameCode, setGameCode] = useLocalStorage('gameCode');
 
     const [data, setData] = useState({});
@@ -42,6 +40,9 @@ export const RoomWrapper = withRouter(({ history, children }) => {
     useEffect(() => {
         if (data.game) {
             setGameCode(data?.game?.gameCode || '');
+            setPlayerId(
+                data?.player?.playerId || data?.spectator?.spectatorId || ''
+            );
             if (!data.game.started) {
                 history.push(`/lobby`);
             } else if (
