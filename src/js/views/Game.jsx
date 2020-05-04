@@ -18,6 +18,7 @@ export default () => {
             player
         },
         playerId,
+        isSpectator,
         send
     } = useContext(RoomContext);
 
@@ -38,7 +39,7 @@ export default () => {
                         />
                     )}
                 </div>
-                {dealerPlayerId !== playerId && hand && (
+                {!isSpectator && dealerPlayerId !== playerId && hand && (
                     <>
                         <CardLayout>
                             {hand.map(({ text, id }) => {

@@ -76,6 +76,7 @@ export const RoomWrapper = withRouter(({ history, children }) => {
                 data,
                 gameCode,
                 playerId,
+                isSpectator: Boolean(data.spectator?.spectatorId),
                 send: (type, data) => gameLobby?.send(type, data)
             }}
         >

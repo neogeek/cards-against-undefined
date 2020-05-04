@@ -17,6 +17,7 @@ export default () => {
         },
         gameCode,
         playerId,
+        isSpectator,
         send
     } = useContext(RoomContext);
 
@@ -25,7 +26,9 @@ export default () => {
     return (
         <RoomHeader>
             <RoomCode>{gameCode}</RoomCode>
-            {started && <ScoreCard>{blackCards.length}</ScoreCard>}
+            {!isSpectator && started && (
+                <ScoreCard>{blackCards.length}</ScoreCard>
+            )}
             <Button
                 onClick={() => {
                     send('leave', {
