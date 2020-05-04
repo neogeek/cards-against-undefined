@@ -1,5 +1,5 @@
 const { join } = require('path');
-const { readFileSync } = require('fs');
+const { existsSync, readFileSync } = require('fs');
 const { createServer } = require('http');
 
 const getContentType = path => {
@@ -24,9 +24,13 @@ const server = ({ port }) =>
             path = join(__dirname, 'dist/', req.url);
         }
 
-        res.writeHead(200, { 'Content-Type': getContentType(path) });
-
-        res.end(readFileSync(path));
+        if (existsSync(path)) {
+            res.writeHead(200, { 'Content-Type': getContentType(path) });
+            res.end(readFileSync(path));
+        } else {
+            res.writeHead(404, { 'Content-Type': getContentType(path) });
+            res.end();
+        }
     }).listen(port);
 
 module.exports = server;
