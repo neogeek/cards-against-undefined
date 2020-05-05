@@ -2,47 +2,20 @@ import React, { createContext, useEffect, useState } from 'react';
 
 import { withRouter } from 'react-router-dom';
 
-import { useLocalStorage } from '@neogeek/common-react-hooks';
-
 import { Reconnecting } from '../views';
 
-import { WebSocketGameLobbyClient } from 'websocket-game-lobby';
+import { useWebSocketGameLobbyClient } from 'websocket-game-lobby-client-hooks';
 
 export const RoomContext = createContext();
 
 export const RoomWrapper = withRouter(({ history, children }) => {
-    const [gameLobby, setGameLobby] = useState();
+    const { data, connected, send } = useWebSocketGameLobbyClient();
 
-    const [playerId, setPlayerId] = useLocalStorage('playerId');
-    const [gameCode, setGameCode] = useLocalStorage('gameCode');
-
-    const [data, setData] = useState({});
-
-    const [connected, setConnected] = useState(false);
-
-    const handleConnect = () => setConnected(true);
-    const handleDisconnect = () => setConnected(false);
-
-    const handleMessage = message => {
-        setData(JSON.parse(message.data));
-    };
+    const [gameCode, setGameCode] = useState('');
 
     useEffect(() => {
-        setGameLobby(
-            new WebSocketGameLobbyClient({
-                port: process.env.NODE_ENV === 'development' ? 5000 : null,
-                gameId: gameCode,
-                playerId
-            })
-        );
-    }, []);
-
-    useEffect(() => {
+        setGameCode(data.game?.gameCode || '');
         if (data.game) {
-            setGameCode(data?.game?.gameCode || '');
-            setPlayerId(
-                data?.player?.playerId || data?.spectator?.spectatorId || ''
-            );
             if (!data.game.started) {
                 history.push(`/lobby`);
             } else if (
@@ -58,26 +31,15 @@ export const RoomWrapper = withRouter(({ history, children }) => {
         }
     }, [data]);
 
-    useEffect(() => {
-        gameLobby?.addEventListener('open', handleConnect);
-        gameLobby?.addEventListener('message', handleMessage);
-        gameLobby?.addEventListener('close', handleDisconnect);
-
-        return () => {
-            gameLobby?.removeEventListener('open', handleConnect);
-            gameLobby?.removeEventListener('message', handleMessage);
-            gameLobby?.removeEventListener('close', handleDisconnect);
-        };
-    }, [gameLobby]);
-
     return (
         <RoomContext.Provider
             value={{
                 data,
                 gameCode,
-                playerId,
+                playerId:
+                    data?.player?.playerId || data?.spectator?.spectatorId,
                 isSpectator: Boolean(data.spectator?.spectatorId),
-                send: (type, data) => gameLobby?.send(type, data)
+                send
             }}
         >
             {connected ? children : <Reconnecting />}

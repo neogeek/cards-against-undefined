@@ -9,11 +9,9 @@ import { RoomContext } from '../hooks/RoomContext';
 export default () => {
     const {
         data: {
-            game: { gameId } = {},
             turn: { blackCard = [], dealerPlayerId } = {},
             player: { hand = [] } = {}
         } = {
-            game,
             turn,
             player
         },
@@ -97,8 +95,6 @@ export default () => {
                                 }
                                 onClick={() => {
                                     send('play-cards', {
-                                        gameId,
-                                        playerId,
                                         playedCards: selectedCards
                                     });
                                     setSelectedCards([]);

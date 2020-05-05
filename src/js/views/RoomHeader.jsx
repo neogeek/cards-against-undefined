@@ -16,7 +16,6 @@ export default () => {
             player
         },
         gameCode,
-        playerId,
         isSpectator,
         send
     } = useContext(RoomContext);
@@ -31,10 +30,7 @@ export default () => {
             )}
             <Button
                 onClick={() => {
-                    send('leave', {
-                        gameId: gameCode,
-                        playerId
-                    });
+                    send('leave');
                     setGameCode('');
                 }}
             >

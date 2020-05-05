@@ -7,7 +7,7 @@ import { RoomHeader } from './';
 import { Button, PageWrapper } from '../components';
 
 export default () => {
-    const { data, gameCode, playerId, send } = useContext(RoomContext);
+    const { data, send } = useContext(RoomContext);
 
     return (
         <>
@@ -21,7 +21,7 @@ export default () => {
                     <Button
                         onClick={e => {
                             e.preventDefault();
-                            send('start', { gameId: gameCode, playerId });
+                            send('start');
                         }}
                     >
                         Everyone is in →

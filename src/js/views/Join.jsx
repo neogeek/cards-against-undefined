@@ -11,7 +11,7 @@ import {
 } from '../components';
 
 export default () => {
-    const { playerId, send } = useContext(RoomContext);
+    const { send } = useContext(RoomContext);
 
     const [gameCode, setGameCode] = useState('');
 
@@ -28,7 +28,7 @@ export default () => {
             <form
                 onSubmit={e => {
                     e.preventDefault();
-                    send('create', { playerId });
+                    send('create');
                 }}
             >
                 <Button type="submit">Create New Game</Button>
@@ -36,7 +36,7 @@ export default () => {
             <form
                 onSubmit={e => {
                     e.preventDefault();
-                    send('join', { gameId: gameCode, playerId });
+                    send('join', { gameCode });
                 }}
             >
                 <Input

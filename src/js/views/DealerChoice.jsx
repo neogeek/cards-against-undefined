@@ -52,7 +52,6 @@ export default () => {
                                     <Button
                                         onClick={() => {
                                             send('dealer-select', {
-                                                type: 'dealer-select',
                                                 gameId,
                                                 playerId,
                                                 winningPlayerId,
