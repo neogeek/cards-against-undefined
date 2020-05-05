@@ -8,19 +8,20 @@
   "main": "index.js",
   "dependencies": {
     "websocket-event-wrapper": "1.0.0",
-    "websocket-game-lobby": "2.0.0",
+    "websocket-game-lobby": "2.0.3",
     "qs": "6.9.4",
     "shuffle-array": "1.0.1"
   },
   "devDependencies": {
-    "@neogeek/common-react-hooks": "github:neogeek/common-react-hooks",
-    "@neogeek/custom-webpack-cli": "github:neogeek/custom-webpack-cli",
+    "@neogeek/common-react-hooks": "1.0.0",
+    "@neogeek/custom-webpack-cli": "1.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-router-dom": "5.1.2",
     "reconnecting-websocket": "4.4.0",
     "styled-components": "5.1.0",
-    "vh-check": "2.0.5"
+    "vh-check": "2.0.5",
+    "websocket-game-lobby-client-hooks": "1.0.0"
   },
   "scripts": {
     "start": "node index.js",
