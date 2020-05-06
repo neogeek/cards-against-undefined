@@ -9,12 +9,15 @@ import { useWebSocketGameLobbyClient } from 'websocket-game-lobby-client-hooks';
 export const RoomContext = createContext();
 
 export const RoomWrapper = withRouter(({ history, children }) => {
-    const { data, connected, send } = useWebSocketGameLobbyClient();
-
-    const [gameCode, setGameCode] = useState('');
+    const {
+        data,
+        gameCode,
+        playerId,
+        connected,
+        send
+    } = useWebSocketGameLobbyClient();
 
     useEffect(() => {
-        setGameCode(data.game?.gameCode || '');
         if (data.game) {
             if (!data.game.started) {
                 history.push(`/lobby`);
@@ -36,8 +39,7 @@ export const RoomWrapper = withRouter(({ history, children }) => {
             value={{
                 data,
                 gameCode,
-                playerId:
-                    data?.player?.playerId || data?.spectator?.spectatorId,
+                playerId,
                 isSpectator: Boolean(data.spectator?.spectatorId),
                 send
             }}
