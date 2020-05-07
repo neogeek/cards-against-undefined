@@ -76,24 +76,24 @@ const setupCurrentTurn = (game, turn) => {
 const websocket = ({ port, server }) => {
     const gameLobby = new WebSocketGameLobbyServer({ port, server });
 
-    gameLobby.addEventListener('start', ({ gameId }, datastore) => {
-        datastore.editGame(gameId, setupGame);
-        datastore.editGame(gameId, setupPlayersInGame);
+    gameLobby.addEventListener('start', async ({ gameId }, datastore) => {
+        await datastore.editGame(gameId, setupGame);
+        await datastore.editGame(gameId, setupPlayersInGame);
 
-        datastore.editGame(gameId, game => {
-            setupCurrentTurn(game, datastore.currentTurn(gameId));
+        await datastore.editGame(gameId, async game => {
+            setupCurrentTurn(game, await datastore.currentTurn(gameId));
         });
     });
     gameLobby.addEventListener(
         'play-cards',
-        ({ gameId, playerId, playedCards }, datastore) => {
-            datastore.editPlayer(gameId, playerId, player =>
+        async ({ gameId, playerId, playedCards }, datastore) => {
+            await datastore.editPlayer(gameId, playerId, player =>
                 removePlayedCardsFromPlayer(player, playedCards)
             );
 
-            datastore.editTurn(
+            await datastore.editTurn(
                 gameId,
-                datastore.currentTurn(gameId).turnId,
+                (await datastore.currentTurn(gameId)).turnId,
                 turn => {
                     turn.playedCards.push({
                         playerId,
@@ -105,27 +105,34 @@ const websocket = ({ port, server }) => {
     );
     gameLobby.addEventListener(
         'dealer-select',
-        ({ gameId, winningPlayerId, winningCards }, datastore) => {
-            datastore.editGame(gameId, setupPlayersInGame);
+        async ({ gameId, winningPlayerId, winningCards }, datastore) => {
+            await datastore.editGame(gameId, setupPlayersInGame);
 
-            datastore.editPlayer(gameId, winningPlayerId, player => {
-                player.blackCards.push(datastore.currentTurn(gameId).blackCard);
-            });
-
-            datastore.editTurn(
+            await datastore.editPlayer(
                 gameId,
-                datastore.currentTurn(gameId).turnId,
+                winningPlayerId,
+                async player => {
+                    player.blackCards.push(
+                        (await datastore.currentTurn(gameId)).blackCard
+                    );
+                }
+            );
+
+            await datastore.editTurn(
+                gameId,
+                (await datastore.currentTurn(gameId)).turnId,
                 turn => {
                     turn.winningCards = winningCards;
                 }
             );
 
-            datastore.endTurn(gameId);
+            await datastore.endTurn(gameId);
 
-            datastore.editTurn(
+            await datastore.editTurn(
                 gameId,
-                datastore.currentTurn(gameId).turnId,
-                turn => setupCurrentTurn(datastore.findGame(gameId), turn)
+                (await datastore.currentTurn(gameId)).turnId,
+                async turn =>
+                    setupCurrentTurn(await datastore.findGame(gameId), turn)
             );
         }
     );
