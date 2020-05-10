@@ -38,6 +38,8 @@ export const RoomWrapper = withRouter(({ history, children }) => {
         <RoomContext.Provider
             value={{
                 data,
+                player: data.player,
+                turn: data.turn,
                 gameCode,
                 playerId,
                 isSpectator: Boolean(data.spectator?.spectatorId),

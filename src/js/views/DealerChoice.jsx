@@ -1,6 +1,12 @@
 import React, { Fragment, useContext } from 'react';
 
-import { Button, CardFront, CardLayout, PageWrapper } from '../components';
+import {
+    Button,
+    CardFront,
+    CardLayout,
+    DealerName,
+    PageWrapper
+} from '../components';
 
 import { RoomHeader } from './';
 
@@ -9,7 +15,7 @@ import { RoomContext } from '../hooks';
 export default () => {
     const {
         data: {
-            game: { gameId } = {},
+            game: { gameId, players = [] } = {},
             turn: { blackCard = {}, playedCards = [], dealerPlayerId } = {}
         } = {
             game,
@@ -24,6 +30,13 @@ export default () => {
             <RoomHeader />
             <PageWrapper>
                 <div>
+                    <DealerName>
+                        {
+                            players?.find(
+                                player => player.playerId === dealerPlayerId
+                            )?.name
+                        }
+                    </DealerName>
                     {blackCard && (
                         <CardFront
                             text={blackCard.text}

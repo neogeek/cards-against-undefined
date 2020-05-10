@@ -85,6 +85,15 @@ const websocket = ({ port, server }) => {
         });
     });
     gameLobby.addEventListener(
+        'update-name',
+        async ({ gameId, playerId, name }, datastore) => {
+            await datastore.editPlayer(gameId, playerId, player => {
+                player.name = name;
+                return player;
+            });
+        }
+    );
+    gameLobby.addEventListener(
         'play-cards',
         async ({ gameId, playerId, playedCards }, datastore) => {
             await datastore.editPlayer(gameId, playerId, player =>

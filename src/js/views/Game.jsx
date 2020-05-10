@@ -1,6 +1,12 @@
 import React, { useContext, useState } from 'react';
 
-import { Button, CardFront, CardLayout, PageWrapper } from '../components';
+import {
+    Button,
+    CardFront,
+    CardLayout,
+    DealerName,
+    PageWrapper
+} from '../components';
 
 import { RoomHeader } from './';
 
@@ -9,9 +15,11 @@ import { RoomContext } from '../hooks/RoomContext';
 export default () => {
     const {
         data: {
+            game: { players = [] } = {},
             turn: { blackCard = [], dealerPlayerId } = {},
             player: { hand = [] } = {}
         } = {
+            game,
             turn,
             player
         },
@@ -27,6 +35,13 @@ export default () => {
             <RoomHeader />
             <PageWrapper>
                 <div>
+                    <DealerName>
+                        {
+                            players?.find(
+                                player => player.playerId === dealerPlayerId
+                            )?.name
+                        }
+                    </DealerName>
                     {blackCard && (
                         <CardFront
                             text={blackCard.text}

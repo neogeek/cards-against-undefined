@@ -1,13 +1,38 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import { RoomContext } from '../hooks';
 
 import { RoomHeader } from './';
 
-import { Button, PageWrapper } from '../components';
+import { Button, Input, PageWrapper } from '../components';
 
 export default () => {
-    const { data, send } = useContext(RoomContext);
+    const { data, player, send } = useContext(RoomContext);
+
+    const [name, setName] = useState(player?.name || '');
+
+    if (!player?.name) {
+        return (
+            <>
+                <RoomHeader />
+                <PageWrapper>
+                    <form>
+                        <Input
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                            require={true}
+                        />
+                        <Button
+                            type="submit"
+                            onClick={() => send('update-name', { name })}
+                        >
+                            Set Name
+                        </Button>
+                    </form>
+                </PageWrapper>
+            </>
+        );
+    }
 
     return (
         <>
@@ -23,9 +48,22 @@ export default () => {
                             e.preventDefault();
                             send('start');
                         }}
+                        disabled={
+                            data?.game?.players.filter(player => !player.name)
+                                .length
+                        }
                     >
                         Everyone is in →
                     </Button>
+                </div>
+                <div>
+                    <ul>
+                        {data?.game?.players
+                            .filter(player => player.name)
+                            .map(player => (
+                                <li key={player.playerId}>{player.name}</li>
+                            ))}
+                    </ul>
                 </div>
             </PageWrapper>
         </>
