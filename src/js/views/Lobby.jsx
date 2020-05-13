@@ -11,7 +11,7 @@ export default () => {
 
     const [name, setName] = useState(player?.name || '');
 
-    if (!player?.name) {
+    if (player && !player.name) {
         return (
             <>
                 <RoomHeader />
@@ -43,18 +43,21 @@ export default () => {
                         Waiting for other players ...{' '}
                         {data?.game?.players.length || 0}
                     </p>
-                    <Button
-                        onClick={e => {
-                            e.preventDefault();
-                            send('start');
-                        }}
-                        disabled={
-                            data?.game?.players.filter(player => !player.name)
-                                .length
-                        }
-                    >
-                        Everyone is in →
-                    </Button>
+                    {player && (
+                        <Button
+                            onClick={e => {
+                                e.preventDefault();
+                                send('start');
+                            }}
+                            disabled={
+                                data?.game?.players.filter(
+                                    player => !player.name
+                                ).length
+                            }
+                        >
+                            Everyone is in →
+                        </Button>
+                    )}
                 </div>
                 <div>
                     <ul>
