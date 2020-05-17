@@ -16,18 +16,18 @@ export default () => {
             <>
                 <RoomHeader />
                 <PageWrapper>
-                    <form>
+                    <form
+                        onSubmit={e => {
+                            e.preventDefault();
+                            send('update-name', { name });
+                        }}
+                    >
                         <Input
                             value={name}
                             onChange={e => setName(e.target.value)}
                             require={true}
                         />
-                        <Button
-                            type="submit"
-                            onClick={() => send('update-name', { name })}
-                        >
-                            Set Name
-                        </Button>
+                        <Button type="submit">Set Name</Button>
                     </form>
                 </PageWrapper>
             </>
