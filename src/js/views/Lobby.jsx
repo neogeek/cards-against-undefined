@@ -4,7 +4,7 @@ import { RoomContext } from '../hooks';
 
 import { RoomHeader } from './';
 
-import { Button, Form, Input, PageWrapper } from '../components';
+import { Button, Form, Input, PlayerList, PageWrapper } from '../components';
 
 export default () => {
     const { data, player, send } = useContext(RoomContext);
@@ -39,10 +39,7 @@ export default () => {
             <RoomHeader />
             <PageWrapper>
                 <div>
-                    <p>
-                        Waiting for other players ...{' '}
-                        {data?.game?.players.length || 0}
-                    </p>
+                    <p>Waiting on other players ...</p>
                     {player && (
                         <Button
                             onClick={e => {
@@ -58,15 +55,7 @@ export default () => {
                             Everyone is in →
                         </Button>
                     )}
-                </div>
-                <div>
-                    <ul>
-                        {data?.game?.players
-                            .filter(player => player.name)
-                            .map(player => (
-                                <li key={player.playerId}>{player.name}</li>
-                            ))}
-                    </ul>
+                    <PlayerList players={data?.game?.players}></PlayerList>
                 </div>
             </PageWrapper>
         </>
