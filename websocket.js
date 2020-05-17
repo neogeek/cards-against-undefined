@@ -82,6 +82,7 @@ const websocket = ({ port, server }) => {
 
         await datastore.editGame(gameId, async game => {
             setupCurrentTurn(game, await datastore.currentTurn(gameId));
+            return game;
         });
     });
     gameLobby.addEventListener(
@@ -108,6 +109,7 @@ const websocket = ({ port, server }) => {
                         playerId,
                         whiteCards: playedCards
                     });
+                    return turn;
                 }
             );
         }
@@ -124,6 +126,7 @@ const websocket = ({ port, server }) => {
                     player.blackCards.push(
                         (await datastore.currentTurn(gameId)).blackCard
                     );
+                    return player;
                 }
             );
 
@@ -132,6 +135,7 @@ const websocket = ({ port, server }) => {
                 (await datastore.currentTurn(gameId)).turnId,
                 turn => {
                     turn.winningCards = winningCards;
+                    return turn;
                 }
             );
 
