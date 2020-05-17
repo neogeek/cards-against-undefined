@@ -21,7 +21,7 @@ const types = {
     }
 };
 
-const CardFront = ({
+export const CardFront = ({
     text = 'undefined',
     description = '',
     type = 'white',
@@ -50,7 +50,7 @@ const CardFront = ({
     );
 };
 
-const CardBack = ({ type = 'white' }) => {
+export const CardBack = ({ type = 'white' }) => {
     return (
         <StyledCard
             backgroundColor={types[type].backgroundColor}
@@ -60,5 +60,3 @@ const CardBack = ({ type = 'white' }) => {
         </StyledCard>
     );
 };
-
-export { CardFront, CardBack };

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StyledScoreIcon, StyledScoreText } from './ScoreCard.styles';
 
-const ScoreCard = ({ children }) => {
+export const ScoreCard = ({ children }) => {
     return (
         <StyledScoreIcon>
             <svg width="60" height="63" xmlns="http://www.w3.org/2000/svg">
@@ -42,5 +42,3 @@ const ScoreCard = ({ children }) => {
         </StyledScoreIcon>
     );
 };
-
-export { ScoreCard };
