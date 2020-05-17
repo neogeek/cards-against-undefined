@@ -1,4 +1,4 @@
-import { StyledAppWrapper as AppWrapper } from './AppWrapper.style';
+import { StyledAppWrapper as AppWrapper } from './AppWrapper.styles';
 import { CardBack, CardFront } from './Card';
 import { StyledButton as Button } from './Button.styles';
 import { StyledCardLayout as CardLayout } from './CardLayout.styles';
