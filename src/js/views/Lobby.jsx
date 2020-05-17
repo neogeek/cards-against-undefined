@@ -4,7 +4,7 @@ import { RoomContext } from '../hooks';
 
 import { RoomHeader } from './';
 
-import { Button, Input, PageWrapper } from '../components';
+import { Button, Form, Input, PageWrapper } from '../components';
 
 export default () => {
     const { data, player, send } = useContext(RoomContext);
@@ -16,7 +16,7 @@ export default () => {
             <>
                 <RoomHeader />
                 <PageWrapper>
-                    <form
+                    <Form
                         onSubmit={e => {
                             e.preventDefault();
                             send('update-name', { name });
@@ -28,7 +28,7 @@ export default () => {
                             require={true}
                         />
                         <Button type="submit">Set Name</Button>
-                    </form>
+                    </Form>
                 </PageWrapper>
             </>
         );

@@ -3,6 +3,7 @@ import { CardBack, CardFront } from './Card';
 import { StyledButton as Button } from './Button.styles';
 import { StyledCardLayout as CardLayout } from './CardLayout.styles';
 import { StyledDealerName as DealerName } from './DealerName.styles';
+import { StyledForm as Form } from './Form.styles';
 import { StyledInput as Input } from './Input.styles';
 import { StyledJoinFooter as JoinFooter } from './JoinFooter.styles';
 import { StyledJoinHeader as JoinHeader } from './JoinHeader.styles';
@@ -18,6 +19,7 @@ export {
     CardFront,
     CardLayout,
     DealerName,
+    Form,
     Input,
     JoinFooter,
     JoinHeader,

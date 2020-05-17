@@ -4,6 +4,7 @@ import { RoomContext } from '../hooks';
 
 import {
     Button,
+    Form,
     Input,
     JoinFooter,
     JoinHeader,
@@ -25,15 +26,15 @@ export default () => {
                     foes
                 </p>
             </JoinHeader>
-            <form
+            <Form
                 onSubmit={e => {
                     e.preventDefault();
                     send('create');
                 }}
             >
                 <Button type="submit">Create New Game</Button>
-            </form>
-            <form
+            </Form>
+            <Form
                 onSubmit={e => {
                     e.preventDefault();
                     send('join', { gameCode });
@@ -50,7 +51,7 @@ export default () => {
                     onChange={e => setGameCode(e.target.value.toUpperCase())}
                 />
                 <Button type="submit">Join Game</Button>
-            </form>
+            </Form>
             <JoinFooter>
                 <p>
                     A game by <a href="https://scottdoxey.com/">Scott Doxey</a>
