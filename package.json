@@ -7,14 +7,14 @@
   },
   "main": "index.js",
   "dependencies": {
-    "websocket-event-wrapper": "1.0.0",
-    "websocket-game-lobby": "2.2.0",
+    "websocket-event-wrapper": "1.1.0",
+    "websocket-game-lobby": "2.2.1",
     "qs": "6.9.4",
     "shuffle-array": "1.0.1"
   },
   "devDependencies": {
     "@neogeek/common-react-hooks": "1.0.0",
-    "@neogeek/custom-webpack-cli": "1.0.0",
+    "@neogeek/custom-webpack-cli": "1.1.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-router-dom": "5.2.0",
