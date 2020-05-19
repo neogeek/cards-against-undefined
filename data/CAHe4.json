@@ -1,0 +1,437 @@
+{
+  "title": "The Fourth Expansion",
+  "blackCards": [
+    {
+      "id": 0,
+      "text": "Man, this is bullshit. Fuck _.",
+      "pick": 1
+    },
+    {
+      "id": 1,
+      "text": "Dear Leader Kim Jong-un,<br>our village praises your infinite wisdom with a humble offering of _.",
+      "pick": 1
+    },
+    {
+      "id": 2,
+      "text": "_ may pass, but _ will last forever.",
+      "pick": 2
+    },
+    {
+      "id": 3,
+      "text": "She's up all night for good fun.<br>I'm up all night for _.",
+      "pick": 1
+    },
+    {
+      "id": 4,
+      "text": "Alright, bros. Our frat house is condemned, and all the hot slampieces are over at Gamma Phi. The time has come to commence Operation _.",
+      "pick": 1
+    },
+    {
+      "id": 5,
+      "text": "The Japanese have developed a smaller, more efficient version of _.",
+      "pick": 1
+    },
+    {
+      "id": 6,
+      "text": "In return for my soul, the Devil promised me _, but all I got was _.",
+      "pick": 2
+    },
+    {
+      "id": 7,
+      "text": "You guys, I saw this crazy movie last night. It opens on _, and then there's some stuff about _, and then it ends with _.",
+      "pick": 3
+    },
+    {
+      "id": 8,
+      "text": "_ will never be the same after _.",
+      "pick": 2
+    },
+    {
+      "id": 9,
+      "text": "Wes Anderson's new film tells the story of a precocious child coming to terms with _.",
+      "pick": 1
+    },
+    {
+      "id": 10,
+      "text": "In the beginning, there was _.<br>And the Lord said, \"Let there be _.\"",
+      "pick": 2
+    },
+    {
+      "id": 11,
+      "text": "What's fun until it gets weird?",
+      "pick": 1
+    },
+    {
+      "id": 12,
+      "text": "We never did find _, but along the way we sure learned a lot about _.",
+      "pick": 2
+    },
+    {
+      "id": 13,
+      "text": "You've seen the bearded lady!<br>You've seen the ring of fire!<br>Now, ladies and gentlemen, feast your eyes upon _!",
+      "pick": 1
+    },
+    {
+      "id": 14,
+      "text": "How am I compensating for my tiny penis?",
+      "pick": 1
+    },
+    {
+      "id": 15,
+      "text": "I'm sorry, sir, but we don't allow _ at the country club.",
+      "pick": 1
+    },
+    {
+      "id": 16,
+      "text": "2 AM in the city that never sleeps. The door swings open and <i>she</i> walks in, legs up to here. Something in her eyes tells me she's looking for _.",
+      "pick": 1
+    },
+    {
+      "id": 17,
+      "text": "As king, how will I keep the peasants in line?",
+      "pick": 1
+    },
+    {
+      "id": 18,
+      "text": "Oprah's book of the month is \"_ For _: A Story of Hope.\"",
+      "pick": 2
+    },
+    {
+      "id": 19,
+      "text": "Do <i>not</i> fuck with me! I am literally _ right now.",
+      "pick": 1
+    },
+    {
+      "id": 20,
+      "text": "Adventure.<br>Romance.<br>_.<br><br>From Paramount Pictures, \"_.\"",
+      "pick": 2
+    },
+    {
+      "id": 21,
+      "text": "I am become _, destroyer of _!",
+      "pick": 2
+    },
+    {
+      "id": 22,
+      "text": "It lurks in the night. It hungers for flesh. This summer, no one is safe from _.",
+      "pick": 1
+    },
+    {
+      "id": 23,
+      "text": "If you can't handle _, you'd better stay away from _.",
+      "pick": 2
+    },
+    {
+      "id": 24,
+      "text": "This is the prime of my life. I'm young, hot, and full of _.",
+      "pick": 1
+    },
+    {
+      "id": 25,
+      "text": "I'm pretty sure I'm high right now, because I'm absolutely mesmerized by _.",
+      "pick": 1
+    },
+    {
+      "id": 26,
+      "text": "This year's hottest album is \"_\" by _.",
+      "pick": 2
+    },
+    {
+      "id": 27,
+      "text": "Every step towards _ gets me a little closer to _.",
+      "pick": 2
+    },
+    {
+      "id": 28,
+      "text": "Forget everything you know about _, because now we've supercharged it with _!",
+      "pick": 2
+    },
+    {
+      "id": 29,
+      "text": "Honey, I have a new role-play I want to try tonight! You can be _, and I'll be _.",
+      "pick": 2
+    }
+  ],
+  "whiteCards": [
+    {
+      "id": 0,
+      "text": "Crazy opium eyes."
+    },
+    {
+      "id": 1,
+      "text": "10 Incredible Facts About the Anus."
+    },
+    {
+      "id": 2,
+      "text": "An interracial handshake."
+    },
+    {
+      "id": 3,
+      "text": "Moderate-to-severe joint pain."
+    },
+    {
+      "id": 4,
+      "text": "Finally finishing off the Indians."
+    },
+    {
+      "id": 5,
+      "text": "Sugar madness."
+    },
+    {
+      "id": 6,
+      "text": "Actual mutants with medical conditions and no superpowers."
+    },
+    {
+      "id": 7,
+      "text": "The secret formula for ultimate female satisfaction."
+    },
+    {
+      "id": 8,
+      "text": "The complex geopolitical quagmire that is the Middle East."
+    },
+    {
+      "id": 9,
+      "text": "Fucking a corpse back to life."
+    },
+    {
+      "id": 10,
+      "text": "Neil Diamond's Greatest Hits."
+    },
+    {
+      "id": 11,
+      "text": "Calculating every mannerism so as not to suggest homosexuality."
+    },
+    {
+      "id": 12,
+      "text": "Whatever a McRib&reg; is made of."
+    },
+    {
+      "id": 13,
+      "text": "No clothes on, penis in vagina."
+    },
+    {
+      "id": 14,
+      "text": "All the single ladies."
+    },
+    {
+      "id": 15,
+      "text": "Whispering all sexy."
+    },
+    {
+      "id": 16,
+      "text": "How awesome I am."
+    },
+    {
+      "id": 17,
+      "text": "Ass to mouth."
+    },
+    {
+      "id": 18,
+      "text": "Smoking crack, for instance."
+    },
+    {
+      "id": 19,
+      "text": "Falling into the toilet."
+    },
+    {
+      "id": 20,
+      "text": "A dance move that's just sex."
+    },
+    {
+      "id": 21,
+      "text": "The size of my penis."
+    },
+    {
+      "id": 22,
+      "text": "Some sort of Asian."
+    },
+    {
+      "id": 23,
+      "text": "A hopeless amount of spiders."
+    },
+    {
+      "id": 24,
+      "text": "Party Mexicans."
+    },
+    {
+      "id": 25,
+      "text": "Drinking responsibly."
+    },
+    {
+      "id": 26,
+      "text": "The safe word."
+    },
+    {
+      "id": 27,
+      "text": "Angelheaded hipsters burning for the ancient heavenly connection to the starry dynamo in the machinery of night."
+    },
+    {
+      "id": 28,
+      "text": "Bouncing up and down."
+    },
+    {
+      "id": 29,
+      "text": "Jizz."
+    },
+    {
+      "id": 30,
+      "text": "Ambiguous sarcasm."
+    },
+    {
+      "id": 31,
+      "text": "A shiny rock that proves I love you."
+    },
+    {
+      "id": 32,
+      "text": "Dem titties."
+    },
+    {
+      "id": 33,
+      "text": "My worthless son."
+    },
+    {
+      "id": 34,
+      "text": "Exploding pigeons."
+    },
+    {
+      "id": 35,
+      "text": "A Ugandan warlord."
+    },
+    {
+      "id": 36,
+      "text": "My sex dungeon."
+    },
+    {
+      "id": 37,
+      "text": "A kiss on the lips."
+    },
+    {
+      "id": 38,
+      "text": "Child Protective Services."
+    },
+    {
+      "id": 39,
+      "text": "A Native American who solves crimes by going into the spirit world."
+    },
+    {
+      "id": 40,
+      "text": "Doo-doo."
+    },
+    {
+      "id": 41,
+      "text": "The peaceful and nonthreatening rise of China."
+    },
+    {
+      "id": 42,
+      "text": "Sports."
+    },
+    {
+      "id": 43,
+      "text": "A fart."
+    },
+    {
+      "id": 44,
+      "text": "Unquestioning obedience."
+    },
+    {
+      "id": 45,
+      "text": "Three consecutive seconds of happiness."
+    },
+    {
+      "id": 46,
+      "text": "Grammar nazis who are also regular Nazis."
+    },
+    {
+      "id": 47,
+      "text": "Snorting coke off a clown's boner."
+    },
+    {
+      "id": 48,
+      "text": "Africa."
+    },
+    {
+      "id": 49,
+      "text": "Depression."
+    },
+    {
+      "id": 50,
+      "text": "A horse with no legs."
+    },
+    {
+      "id": 51,
+      "text": "The euphoric rush of strangling a drifter."
+    },
+    {
+      "id": 52,
+      "text": "Khakis."
+    },
+    {
+      "id": 53,
+      "text": "Interspecies marriage."
+    },
+    {
+      "id": 54,
+      "text": "A gender identity that can only be conveyed through slam poetry."
+    },
+    {
+      "id": 55,
+      "text": "Almost giving money to a homeless person."
+    },
+    {
+      "id": 56,
+      "text": "Stuff a child's face with Fun Dip&reg; until he starts having fun."
+    },
+    {
+      "id": 57,
+      "text": "What Jesus would do."
+    },
+    {
+      "id": 58,
+      "text": "A for-real lizard that spits blood from its eyes."
+    },
+    {
+      "id": 59,
+      "text": "Blackula."
+    },
+    {
+      "id": 60,
+      "text": "The tiniest shred of evidence that God is real."
+    },
+    {
+      "id": 61,
+      "text": "My dad's dumb fucking face."
+    },
+    {
+      "id": 62,
+      "text": "Prince Ali,<br>fabulous he,<br>Ali Ababwa."
+    },
+    {
+      "id": 63,
+      "text": "A manhole."
+    },
+    {
+      "id": 64,
+      "text": "A sex goblin with a carnival penis."
+    },
+    {
+      "id": 65,
+      "text": "A bunch of idiots playing a card game instead of interacting like normal humans."
+    },
+    {
+      "id": 66,
+      "text": "A sex comet from Neptune that plunges the Earth into eternal sexiness."
+    },
+    {
+      "id": 67,
+      "text": "Sharks with legs."
+    },
+    {
+      "id": 68,
+      "text": "Injecting speed into one arm and horse tranquilizer into the other."
+    },
+    {
+      "id": 69,
+      "text": "Lots and lots of abortions."
+    }
+  ]
+}

@@ -2,7 +2,7 @@ const { WebSocketGameLobbyServer } = require('websocket-game-lobby');
 
 const shuffle = require('shuffle-array');
 
-const deck = require('./data/base');
+const data = require('./data/');
 
 const { removeArrayItem } = require('./utils');
 
@@ -14,8 +14,8 @@ const setupGame = game => {
     return Object.defineProperties(game, {
         deck: {
             value: {
-                blackCards: shuffle([...deck.blackCards]),
-                whiteCards: shuffle([...deck.whiteCards])
+                blackCards: shuffle([...data.Base.blackCards]),
+                whiteCards: shuffle([...data.Base.whiteCards])
             }
         }
     });

@@ -1,0 +1,427 @@
+{
+  "title": "The First Expansion",
+  "blackCards": [
+    {
+      "id": 0,
+      "text": "What brought the orgy to a grinding halt?",
+      "pick": 1
+    },
+    {
+      "id": 1,
+      "text": "When I pooped, what came out of my butt?",
+      "pick": 1
+    },
+    {
+      "id": 2,
+      "text": "In the distant future, historians will agree that _ marked the beginning of America's decline.",
+      "pick": 1
+    },
+    {
+      "id": 3,
+      "text": "What's the gift that keeps on giving?",
+      "pick": 1
+    },
+    {
+      "id": 4,
+      "text": "This season on Man vs. Wild, Bear Grylls must survive in the depths of the Amazon with only _ and his wits.",
+      "pick": 1
+    },
+    {
+      "id": 5,
+      "text": "Michael Bay's new three-hour action epic pits _ against _.",
+      "pick": 2
+    },
+    {
+      "id": 6,
+      "text": "And I would have gotten away with it, too, if it hadn't been for _!",
+      "pick": 1
+    },
+    {
+      "id": 7,
+      "text": "In a pinch, _ can be a suitable substitute for _.",
+      "pick": 2
+    },
+    {
+      "id": 8,
+      "text": "What has been making life difficult at the nudist colony?",
+      "pick": 1
+    },
+    {
+      "id": 9,
+      "text": "Science will never explain the origin of _.",
+      "pick": 1
+    },
+    {
+      "id": 10,
+      "text": "In Rome, there are whisperings that the Vatican has a secret room devoted to _.",
+      "pick": 1
+    },
+    {
+      "id": 11,
+      "text": "I learned the hard way that you can't cheer up a grieving friend with _.",
+      "pick": 1
+    },
+    {
+      "id": 12,
+      "text": "When all else fails, I can always masturbate to _.",
+      "pick": 1
+    },
+    {
+      "id": 13,
+      "text": "An international tribunal has found _ guilty of _.",
+      "pick": 2
+    },
+    {
+      "id": 14,
+      "text": "In its new tourism campaign, Detroit proudly proclaims that it has finally eliminated _.",
+      "pick": 1
+    },
+    {
+      "id": 15,
+      "text": "In his new self-produced album, Kanye West raps over the sounds of _.",
+      "pick": 1
+    },
+    {
+      "id": 16,
+      "text": "The socialist governments of Scandinavia have declared that access to _ is a basic human right.",
+      "pick": 1
+    },
+    {
+      "id": 17,
+      "text": "He who controls _ controls the world.",
+      "pick": 1
+    },
+    {
+      "id": 18,
+      "text": "Dear Sir or Madam, We regret to inform you that the Office of _ has denied your request for _.",
+      "pick": 2
+    },
+    {
+      "id": 19,
+      "text": "The CIA now interrogates enemy agents by repeatedly subjecting them to _.",
+      "pick": 1
+    }
+  ],
+  "whiteCards": [
+    {
+      "id": 0,
+      "text": "Getting in her pants, politely."
+    },
+    {
+      "id": 1,
+      "text": "Gladiatorial combat."
+    },
+    {
+      "id": 2,
+      "text": "Good grammar."
+    },
+    {
+      "id": 3,
+      "text": "Hipsters."
+    },
+    {
+      "id": 4,
+      "text": "Gandalf."
+    },
+    {
+      "id": 5,
+      "text": "Genetically engineered super-soldiers."
+    },
+    {
+      "id": 6,
+      "text": "George Clooney's musk."
+    },
+    {
+      "id": 7,
+      "text": "Getting abducted by Peter Pan."
+    },
+    {
+      "id": 8,
+      "text": "Eating an albino."
+    },
+    {
+      "id": 9,
+      "text": "Enormous Scandinavian women."
+    },
+    {
+      "id": 10,
+      "text": "Fabricating statistics."
+    },
+    {
+      "id": 11,
+      "text": "Finding a skeleton."
+    },
+    {
+      "id": 12,
+      "text": "Suicidal thoughts."
+    },
+    {
+      "id": 13,
+      "text": "Dancing with a broom."
+    },
+    {
+      "id": 14,
+      "text": "Deflowering the princess."
+    },
+    {
+      "id": 15,
+      "text": "Dorito breath."
+    },
+    {
+      "id": 16,
+      "text": "One thousand Slim Jims."
+    },
+    {
+      "id": 17,
+      "text": "My machete."
+    },
+    {
+      "id": 18,
+      "text": "Overpowering your father."
+    },
+    {
+      "id": 19,
+      "text": "Ominous background music."
+    },
+    {
+      "id": 20,
+      "text": "Media coverage."
+    },
+    {
+      "id": 21,
+      "text": "Making the penises kiss."
+    },
+    {
+      "id": 22,
+      "text": "Moral ambiguity."
+    },
+    {
+      "id": 23,
+      "text": "Medieval Times&reg; Dinner &amp; Tournament."
+    },
+    {
+      "id": 24,
+      "text": "Mad hacky-sack skills."
+    },
+    {
+      "id": 25,
+      "text": "Just the tip."
+    },
+    {
+      "id": 26,
+      "text": "Literally eating shit."
+    },
+    {
+      "id": 27,
+      "text": "Leveling up."
+    },
+    {
+      "id": 28,
+      "text": "Insatiable bloodlust."
+    },
+    {
+      "id": 29,
+      "text": "Historical revisionism."
+    },
+    {
+      "id": 30,
+      "text": "Jean-Claude Van Damme."
+    },
+    {
+      "id": 31,
+      "text": "Jafar."
+    },
+    {
+      "id": 32,
+      "text": "The boners of the elderly."
+    },
+    {
+      "id": 33,
+      "text": "The economy."
+    },
+    {
+      "id": 34,
+      "text": "Statistically validated stereotypes."
+    },
+    {
+      "id": 35,
+      "text": "Sudden Poop Explosion Disease."
+    },
+    {
+      "id": 36,
+      "text": "Slow motion."
+    },
+    {
+      "id": 37,
+      "text": "Space muffins."
+    },
+    {
+      "id": 38,
+      "text": "Sexual humiliation."
+    },
+    {
+      "id": 39,
+      "text": "Sexy Siamese twins."
+    },
+    {
+      "id": 40,
+      "text": "Santa Claus."
+    },
+    {
+      "id": 41,
+      "text": "Scrotum tickling."
+    },
+    {
+      "id": 42,
+      "text": "Ripping into a man's chest and pulling out his still-beating heart."
+    },
+    {
+      "id": 43,
+      "text": "Ryan Gosling riding in on a white horse."
+    },
+    {
+      "id": 44,
+      "text": "Quivering jowls."
+    },
+    {
+      "id": 45,
+      "text": "Revenge fucking."
+    },
+    {
+      "id": 46,
+      "text": "Pistol-whipping a hostage."
+    },
+    {
+      "id": 47,
+      "text": "Quiche."
+    },
+    {
+      "id": 48,
+      "text": "Zeus's sexual appetites."
+    },
+    {
+      "id": 49,
+      "text": "Words, words, words."
+    },
+    {
+      "id": 50,
+      "text": "Tripping balls."
+    },
+    {
+      "id": 51,
+      "text": "Being a busy adult with many important things to do."
+    },
+    {
+      "id": 52,
+      "text": "The four arms of Vishnu."
+    },
+    {
+      "id": 53,
+      "text": "The shambling corpse of Larry King."
+    },
+    {
+      "id": 54,
+      "text": "The hiccups."
+    },
+    {
+      "id": 55,
+      "text": "The harsh light of day."
+    },
+    {
+      "id": 56,
+      "text": "The Gulags."
+    },
+    {
+      "id": 57,
+      "text": "The Fanta&reg; girls."
+    },
+    {
+      "id": 58,
+      "text": "A big black dick."
+    },
+    {
+      "id": 59,
+      "text": "A beached whale."
+    },
+    {
+      "id": 60,
+      "text": "A low standard of living."
+    },
+    {
+      "id": 61,
+      "text": "A nuanced critique."
+    },
+    {
+      "id": 62,
+      "text": "A bloody pacifier."
+    },
+    {
+      "id": 63,
+      "text": "A crappy little hand."
+    },
+    {
+      "id": 64,
+      "text": "Shaft."
+    },
+    {
+      "id": 65,
+      "text": "Being a dinosaur."
+    },
+    {
+      "id": 66,
+      "text": "Beating your wives."
+    },
+    {
+      "id": 67,
+      "text": "Neil Patrick Harris."
+    },
+    {
+      "id": 68,
+      "text": "Coughing into a vagina."
+    },
+    {
+      "id": 69,
+      "text": "Carnies."
+    },
+    {
+      "id": 70,
+      "text": "Nubile slave boys."
+    },
+    {
+      "id": 71,
+      "text": "Bosnian chicken farmers."
+    },
+    {
+      "id": 72,
+      "text": "A web of lies."
+    },
+    {
+      "id": 73,
+      "text": "A rival dojo."
+    },
+    {
+      "id": 74,
+      "text": "A passionate Latino lover."
+    },
+    {
+      "id": 75,
+      "text": "Panty raids."
+    },
+    {
+      "id": 76,
+      "text": "Appreciative snapping."
+    },
+    {
+      "id": 77,
+      "text": "Apologizing."
+    },
+    {
+      "id": 78,
+      "text": "Clams."
+    },
+    {
+      "id": 79,
+      "text": "A woman scorned."
+    }
+  ]
+}

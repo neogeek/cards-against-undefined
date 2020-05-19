@@ -1,0 +1,432 @@
+{
+  "title": "The Sixth Expansion",
+  "blackCards": [
+    {
+      "id": 0,
+      "text": "I work my ass off all day for this family, and this is what I come home to? _!?",
+      "pick": 1
+    },
+    {
+      "id": 1,
+      "text": "I have a strict policy. First date, dinner. Second date, kiss. Third date, _.",
+      "pick": 1
+    },
+    {
+      "id": 2,
+      "text": "When I was a kid, we used to play Cowboys and _.",
+      "pick": 1
+    },
+    {
+      "id": 3,
+      "text": "This is America. If you don't work hard, you don't succeed. I don't care if you're black, white, purple, or _.",
+      "pick": 1
+    },
+    {
+      "id": 4,
+      "text": "You Won't Believe These 15 Hilarious _ Bloopers!",
+      "pick": 1
+    },
+    {
+      "id": 5,
+      "text": "James is a lonely boy. But when he discovers a secret door in his attic, he meets a magical new friend: _.",
+      "pick": 1
+    },
+    {
+      "id": 6,
+      "text": "Don't worry kid. It gets better. I've been living with _ for 20 years.",
+      "pick": 1
+    },
+    {
+      "id": 7,
+      "text": "My grandfather worked his way up from nothing. When he came to this country, all he had was the shoes on his feet and _.",
+      "pick": 1
+    },
+    {
+      "id": 8,
+      "text": "Behind every powerful man is _.",
+      "pick": 1
+    },
+    {
+      "id": 9,
+      "text": "You are not alone. Millions of Americans struggle with _ every day.",
+      "pick": 1
+    },
+    {
+      "id": 10,
+      "text": "Come to Dubai, where you can relax in our world famous spas, experience the nightlife, or simply enjoy _ by the poolside.",
+      "pick": 1
+    },
+    {
+      "id": 11,
+      "text": "\"This is madness.\" \"No, THIS IS _!\"",
+      "pick": 1
+    },
+    {
+      "id": 12,
+      "text": "Listen Gary, I like you. But if you want that corner office, you're going to have to show me _.",
+      "pick": 1
+    },
+    {
+      "id": 13,
+      "text": "I went to the desert and ate of the peyote cactus. Turns out my spirit animal is _.",
+      "pick": 1
+    },
+    {
+      "id": 14,
+      "text": "And would you like those buffalo wings mild, hot, or _?",
+      "pick": 1
+    },
+    {
+      "id": 15,
+      "text": "The six things I could never do without: oxygen, Facebook, chocolate, Netflix, friends, and _ LOL!",
+      "pick": 1
+    },
+    {
+      "id": 16,
+      "text": "Why won't you make love to me anymore? Is it _?",
+      "pick": 1
+    },
+    {
+      "id": 17,
+      "text": "Puberty is a time of change. You might notice hair growing in new places. You might develop an interest in _. This is normal.",
+      "pick": 1
+    },
+    {
+      "id": 18,
+      "text": "I'm sorry, Mrs. Chen, but there was nothing we could do. At 4:15 this morning, your son succumbed to _.",
+      "pick": 1
+    },
+    {
+      "id": 19,
+      "text": "I'm Miss Tennessee, and if I could make the world better by changing one thing, I would get rid of _.",
+      "pick": 1
+    },
+    {
+      "id": 20,
+      "text": "Tonight we will have sex. And afterwards, If you'd like, a little bit of _.",
+      "pick": 1
+    },
+    {
+      "id": 21,
+      "text": "Everybody join hands and close your eyes. Do you sense that? That's the presence of _ in this room.",
+      "pick": 1
+    },
+    {
+      "id": 22,
+      "text": "To become a true Yanomamo warrior, you must prove that you can withstand _ without crying out.",
+      "pick": 1
+    },
+    {
+      "id": 23,
+      "text": "Y'all ready to get this thing started? I'm Nick Cannon, and this is America's Got _.",
+      "pick": 1
+    },
+    {
+      "id": 24,
+      "text": "If you had to describe the Card Czar, using only one of the cards in your hand, which one would it be?",
+      "pick": 1
+    }
+  ],
+  "whiteCards": [
+    {
+      "id": 0,
+      "text": "A bass drop so huge it tears the starry vault asunder to reveal the face of God."
+    },
+    {
+      "id": 1,
+      "text": "Growing up chained to a radiator in perpetual darkness."
+    },
+    {
+      "id": 2,
+      "text": "Shitting all over the floor like a bad, bad girl."
+    },
+    {
+      "id": 3,
+      "text": "A buttload of candy."
+    },
+    {
+      "id": 4,
+      "text": "Sucking all the milk out of a yak."
+    },
+    {
+      "id": 5,
+      "text": "Bullets."
+    },
+    {
+      "id": 6,
+      "text": "A man who is so cool that he rides on a motorcycle."
+    },
+    {
+      "id": 7,
+      "text": "Sudden penis loss."
+    },
+    {
+      "id": 8,
+      "text": "Getting all offended."
+    },
+    {
+      "id": 9,
+      "text": "Crying and shitting and eating spaghetti."
+    },
+    {
+      "id": 10,
+      "text": "One unforgettable night of passion."
+    },
+    {
+      "id": 11,
+      "text": "Being popular and good at sports."
+    },
+    {
+      "id": 12,
+      "text": "Filling a man's anus with concrete."
+    },
+    {
+      "id": 13,
+      "text": "Two whales fucking the shit out of eachother."
+    },
+    {
+      "id": 14,
+      "text": "Cool, relateable cancer teens."
+    },
+    {
+      "id": 15,
+      "text": "The amount of gay I am."
+    },
+    {
+      "id": 16,
+      "text": "A possible Muslim."
+    },
+    {
+      "id": 17,
+      "text": "Unsheathing my massive horse cock."
+    },
+    {
+      "id": 18,
+      "text": "A bowl of gourds."
+    },
+    {
+      "id": 19,
+      "text": "The male gaze."
+    },
+    {
+      "id": 20,
+      "text": "The power of the Dark Side."
+    },
+    {
+      "id": 21,
+      "text": "Ripping a dog in half."
+    },
+    {
+      "id": 22,
+      "text": "A constant need for validation."
+    },
+    {
+      "id": 23,
+      "text": "Meaningless sex."
+    },
+    {
+      "id": 24,
+      "text": "Such a big boy."
+    },
+    {
+      "id": 25,
+      "text": "Throwing stones at a man until he dies."
+    },
+    {
+      "id": 26,
+      "text": "Cancer."
+    },
+    {
+      "id": 27,
+      "text": "Like a million alligators."
+    },
+    {
+      "id": 28,
+      "text": "Eating together like a god damn family for once."
+    },
+    {
+      "id": 29,
+      "text": "Cute boys."
+    },
+    {
+      "id": 30,
+      "text": "Pussy."
+    },
+    {
+      "id": 31,
+      "text": "Being a terrible mother."
+    },
+    {
+      "id": 32,
+      "text": "Never having sex again."
+    },
+    {
+      "id": 33,
+      "text": "A pizza guy who fucked up."
+    },
+    {
+      "id": 34,
+      "text": "A whole lotta woman."
+    },
+    {
+      "id": 35,
+      "text": "The all-new Nissan Pathfinder with 0.9% APR financing!"
+    },
+    {
+      "id": 36,
+      "text": "A peyote-fueled vision quest."
+    },
+    {
+      "id": 37,
+      "text": "Kale."
+    },
+    {
+      "id": 38,
+      "text": "Breastfeeding a ten year old."
+    },
+    {
+      "id": 39,
+      "text": "Crippling social anxiety."
+    },
+    {
+      "id": 40,
+      "text": "Immortality cream."
+    },
+    {
+      "id": 41,
+      "text": "Texas."
+    },
+    {
+      "id": 42,
+      "text": "Teaching a girl how to handjob the penis."
+    },
+    {
+      "id": 43,
+      "text": "A turd."
+    },
+    {
+      "id": 44,
+      "text": "Shapes and colors."
+    },
+    {
+      "id": 45,
+      "text": "Whatever you wish, mother."
+    },
+    {
+      "id": 46,
+      "text": "The haunting stare of an Iraqi child."
+    },
+    {
+      "id": 47,
+      "text": "Robots who just want to party."
+    },
+    {
+      "id": 48,
+      "text": "A self-microwaving burrito."
+    },
+    {
+      "id": 49,
+      "text": "Forgetting grandma's first name."
+    },
+    {
+      "id": 50,
+      "text": "Our new Buffalo Chicken Dippers&reg;!"
+    },
+    {
+      "id": 51,
+      "text": "Treasures beyond your wildest dreams."
+    },
+    {
+      "id": 52,
+      "text": "Getting shot out of a cannon."
+    },
+    {
+      "id": 53,
+      "text": "The sweet song of sword against sword and the braying of mighty war beasts."
+    },
+    {
+      "id": 54,
+      "text": "Walking into a glass door."
+    },
+    {
+      "id": 55,
+      "text": "The color \"puce\"."
+    },
+    {
+      "id": 56,
+      "text": "Every ounce of charisma left in Mick Jagger's tired body."
+    },
+    {
+      "id": 57,
+      "text": "The eighth graders."
+    },
+    {
+      "id": 58,
+      "text": "Setting my balls on fire and cartwheeling to Ohio."
+    },
+    {
+      "id": 59,
+      "text": "The dentist."
+    },
+    {
+      "id": 60,
+      "text": "Gwyneth Paltrow's opinions."
+    },
+    {
+      "id": 61,
+      "text": "Turning the rivers red with the blood of infidels."
+    },
+    {
+      "id": 62,
+      "text": "Rabies."
+    },
+    {
+      "id": 63,
+      "text": "Important news about Taylor Swift."
+    },
+    {
+      "id": 64,
+      "text": "Ejaculating inside another man's wife."
+    },
+    {
+      "id": 65,
+      "text": "Owls, the perfect predator."
+    },
+    {
+      "id": 66,
+      "text": "Being John Malkovich."
+    },
+    {
+      "id": 67,
+      "text": "Bathing in moonsblood and dancing around the ancient oak."
+    },
+    {
+      "id": 68,
+      "text": "An oppressed people with a vibrant culture."
+    },
+    {
+      "id": 69,
+      "text": "An overwhelming variety of cheeses."
+    },
+    {
+      "id": 70,
+      "text": "Reading the entire End-User License Agreement."
+    },
+    {
+      "id": 71,
+      "text": "Morpheus."
+    },
+    {
+      "id": 72,
+      "text": "Peeing into a girl's butt to make a baby."
+    },
+    {
+      "id": 73,
+      "text": "Generally having no idea of what's going on."
+    },
+    {
+      "id": 74,
+      "text": "No longer finding any Cards Against Humanity card funny."
+    }
+  ]
+}
