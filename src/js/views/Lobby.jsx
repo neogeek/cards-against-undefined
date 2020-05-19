@@ -25,6 +25,7 @@ export default () => {
                         <Input
                             value={name}
                             onChange={e => setName(e.target.value)}
+                            placeholder="Nick's Name"
                             require={true}
                         />
                         <Button type="submit">Set Name</Button>
