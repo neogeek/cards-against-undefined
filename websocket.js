@@ -8,14 +8,20 @@ const { removeArrayItem } = require('./utils');
 
 const MAX_CARDS_IN_HAND = 5;
 
-const setupGame = game => {
+const setupGame = (game, decks) => {
     game.dealerPlayerId = null;
+
+    if (!decks) decks = [{ value: 'Base' }];
 
     return Object.defineProperties(game, {
         deck: {
             value: {
-                blackCards: shuffle([...data.Base.blackCards]),
-                whiteCards: shuffle([...data.Base.whiteCards])
+                blackCards: shuffle(
+                    decks.map(({ value }) => [...data[value].blackCards]).flat()
+                ),
+                whiteCards: shuffle(
+                    decks.map(({ value }) => [...data[value].whiteCards]).flat()
+                )
             }
         }
     });
@@ -76,15 +82,18 @@ const setupCurrentTurn = (game, turn) => {
 const websocket = ({ port, server }) => {
     const gameLobby = new WebSocketGameLobbyServer({ port, server });
 
-    gameLobby.addEventListener('start', async ({ gameId }, datastore) => {
-        await datastore.editGame(gameId, setupGame);
-        await datastore.editGame(gameId, setupPlayersInGame);
+    gameLobby.addEventListener(
+        'start',
+        async ({ gameId, decks }, datastore) => {
+            await datastore.editGame(gameId, game => setupGame(game, decks));
+            await datastore.editGame(gameId, setupPlayersInGame);
 
-        await datastore.editGame(gameId, async game => {
-            setupCurrentTurn(game, await datastore.currentTurn(gameId));
-            return game;
-        });
-    });
+            await datastore.editGame(gameId, async game => {
+                setupCurrentTurn(game, await datastore.currentTurn(gameId));
+                return game;
+            });
+        }
+    );
     gameLobby.addEventListener(
         'update-name',
         async ({ gameId, playerId, name }, datastore) => {

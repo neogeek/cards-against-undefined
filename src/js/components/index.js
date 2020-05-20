@@ -12,6 +12,7 @@ import { PlayerList } from './PlayerList';
 import { StyledRoomCode as RoomCode } from './RoomCode.styles';
 import { StyledRoomHeader as RoomHeader } from './RoomHeader.styles';
 import { ScoreCard } from './ScoreCard';
+import { StyledSelect as Select } from './Select.styles';
 
 export {
     AppWrapper,
@@ -28,5 +29,6 @@ export {
     PlayerList,
     RoomCode,
     RoomHeader,
-    ScoreCard
+    ScoreCard,
+    Select
 };
