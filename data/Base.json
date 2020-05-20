@@ -1,4 +1,5 @@
 {
+  "title": "Base Set",
   "blackCards": [
     {
       "id": 0,
@@ -22,7 +23,7 @@
     },
     {
       "id": 4,
-      "text": "This is the way the world ends / This is the way the world ends / Not with a bang but with _.",
+      "text": "This is the way the world ends \\<br>This is the way the world ends \\<br>Not with a bang but with _.",
       "pick": 1
     },
     {
@@ -67,7 +68,7 @@
     },
     {
       "id": 13,
-      "text": "What's the next Happy Meal® toy?",
+      "text": "What's the next Happy Meal&reg; toy?",
       "pick": 1
     },
     {
@@ -337,13 +338,13 @@
     },
     {
       "id": 67,
-      "text": "Lifetime® presents _, the story of _.",
+      "text": "Lifetime&reg; presents _, the story of _.",
       "pick": 2
     },
     {
       "id": 68,
       "text": "Make a haiku.",
-      "pick": 3
+      "pick": 1
     },
     {
       "id": 69,
@@ -378,7 +379,7 @@
     {
       "id": 75,
       "text": "What's the next superhero/sidekick duo?",
-      "pick": 2
+      "pick": 1
     },
     {
       "id": 76,
@@ -427,7 +428,7 @@
     },
     {
       "id": 85,
-      "text": "During his childhood, Salvador Dalí produced hundreds of paintings of _.",
+      "text": "During his childhood, Salvador Dal&iacute; produced hundreds of paintings of _.",
       "pick": 1
     },
     {
@@ -486,7 +487,7 @@
     },
     {
       "id": 8,
-      "text": "Viagra®."
+      "text": "Viagra&reg;."
     },
     {
       "id": 9,
@@ -922,7 +923,7 @@
     },
     {
       "id": 117,
-      "text": "Five-Dollar Footlongs™."
+      "text": "Five-Dollar Footlongs&trade;."
     },
     {
       "id": 118,
@@ -994,7 +995,7 @@
     },
     {
       "id": 135,
-      "text": "The Tempur-Pedic® Swedish Sleep System™."
+      "text": "The Tempur-Pedic&reg; Swedish Sleep System&trade;."
     },
     {
       "id": 136,
@@ -1094,7 +1095,7 @@
     },
     {
       "id": 160,
-      "text": "Fancy Feast®."
+      "text": "Fancy Feast&reg;."
     },
     {
       "id": 161,
@@ -1206,7 +1207,7 @@
     },
     {
       "id": 188,
-      "text": "Hot Pockets®."
+      "text": "Hot Pockets&reg;."
     },
     {
       "id": 189,
@@ -1322,7 +1323,7 @@
     },
     {
       "id": 217,
-      "text": "The Übermensch."
+      "text": "The &Uuml;bermensch."
     },
     {
       "id": 218,
@@ -1350,7 +1351,7 @@
     },
     {
       "id": 224,
-      "text": "Domino's™ Oreo™ Dessert Pizza."
+      "text": "Domino's&trade; Oreo&trade; Dessert Pizza."
     },
     {
       "id": 225,
@@ -1390,7 +1391,7 @@
     },
     {
       "id": 234,
-      "text": "Adderall™."
+      "text": "Adderall&trade;."
     },
     {
       "id": 235,
@@ -1618,7 +1619,7 @@
     },
     {
       "id": 291,
-      "text": "GoGurt®."
+      "text": "GoGurt&reg;."
     },
     {
       "id": 292,
@@ -1702,7 +1703,7 @@
     },
     {
       "id": 312,
-      "text": "A Super Soaker™ full of cat pee."
+      "text": "A Super Soaker&trade; full of cat pee."
     },
     {
       "id": 313,
@@ -1770,7 +1771,7 @@
     },
     {
       "id": 329,
-      "text": "Lunchables™."
+      "text": "Lunchables&trade;."
     },
     {
       "id": 330,
@@ -1878,7 +1879,7 @@
     },
     {
       "id": 356,
-      "text": "The Make-A-Wish® Foundation."
+      "text": "The Make-A-Wish&reg; Foundation."
     },
     {
       "id": 357,
@@ -1942,7 +1943,7 @@
     },
     {
       "id": 372,
-      "text": "A Bop It™."
+      "text": "A Bop It&trade;."
     },
     {
       "id": 373,
@@ -2066,7 +2067,7 @@
     },
     {
       "id": 403,
-      "text": "Switching to Geico®."
+      "text": "Switching to Geico&reg;."
     },
     {
       "id": 404,
@@ -2078,7 +2079,7 @@
     },
     {
       "id": 406,
-      "text": "Home video of Oprah sobbing into a Lean Cuisine®."
+      "text": "Home video of Oprah sobbing into a Lean Cuisine&reg;."
     },
     {
       "id": 407,
