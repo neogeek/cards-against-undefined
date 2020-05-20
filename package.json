@@ -7,10 +7,11 @@
   },
   "main": "index.js",
   "dependencies": {
-    "websocket-event-wrapper": "1.1.0",
-    "websocket-game-lobby": "2.2.1",
+    "http-single-serve": "1.0.0",
     "qs": "6.9.4",
-    "shuffle-array": "1.0.1"
+    "shuffle-array": "1.0.1",
+    "websocket-event-wrapper": "1.1.0",
+    "websocket-game-lobby": "2.2.1"
   },
   "devDependencies": {
     "@neogeek/common-react-hooks": "1.0.0",
