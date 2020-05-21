@@ -21,8 +21,7 @@ const allDecks = [
     { value: 'CAHe4', label: 'The Fourth Expansion' },
     { value: 'CAHe5', label: 'The Fifth Expansion' },
     { value: 'CAHe6', label: 'The Sixth Expansion' },
-    { value: 'family', label: 'Family Edition (BETA)' },
-    { value: 'Weed', label: 'Weed Pack' }
+    { value: 'family', label: 'Family Edition (BETA)' }
 ];
 
 export default () => {
