@@ -16,7 +16,9 @@ export default () => {
     const {
         data: {
             game: { gameId, players = [] } = {},
-            turn: { blackCard = {}, playedCards = [], dealerPlayerId } = {}
+            turn: {
+                custom: { blackCard = {}, playedCards = [], dealerPlayerId }
+            } = { custom: {} }
         } = {
             game,
             turn

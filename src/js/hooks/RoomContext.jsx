@@ -24,7 +24,7 @@ export const RoomWrapper = withRouter(({ history, children }) => {
             if (!data.game.started) {
                 history.push(`/lobby`);
             } else if (
-                data.turn.playedCards.length ===
+                data.turn.custom.playedCards.length ===
                 data.game.players.length - 1
             ) {
                 history.push(`/dealer-choice`);

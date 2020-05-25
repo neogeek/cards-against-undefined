@@ -10,7 +10,7 @@ export default () => {
     const {
         data: {
             game: { started = false } = {},
-            player: { blackCards = [] } = {}
+            player: { custom: { blackCards = [] } } = { custom: {} }
         } = {
             game,
             player

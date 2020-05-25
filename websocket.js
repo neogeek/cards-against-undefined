@@ -8,92 +8,64 @@ const { removeArrayItem } = require('./utils');
 
 const MAX_CARDS_IN_HAND = 5;
 
-const setupGame = (game, decks) => {
-    game.dealerPlayerId = null;
-
-    if (!decks) decks = [{ value: 'Base' }];
-
-    return Object.defineProperties(game, {
-        deck: {
-            value: {
-                blackCards: shuffle(
-                    decks.map(({ value }) => [...data[value].blackCards]).flat()
-                ),
-                whiteCards: shuffle(
-                    decks.map(({ value }) => [...data[value].whiteCards]).flat()
-                )
-            }
-        }
-    });
-};
-
-const removePlayedCardsFromPlayer = (player, playedCards) => {
-    playedCards.map(({ id }) =>
-        removeArrayItem(player.hand, card => card.id === id)
-    );
-    return player;
-};
-
-const setupPlayersInGame = game => {
-    game.players.map(player => {
-        if (!player.hasOwnProperty('hand')) {
-            player.hand = [];
-        }
-        if (!player.hasOwnProperty('blackCards')) {
-            player.blackCards = [];
-        }
-
-        player.hand.push(
-            ...game.deck.whiteCards.splice(
-                0,
-                MAX_CARDS_IN_HAND - player.hand.length
-            )
-        );
-    });
-    return game;
-};
-
-const setupCurrentTurn = (game, turn) => {
-    if (!turn.hasOwnProperty('blackCard')) {
-        turn.blackCard = game.deck.blackCards.splice(0, 1).find(val => val);
-    }
-    if (!turn.hasOwnProperty('playedCards')) {
-        turn.playedCards = [];
-    }
-    if (!turn.hasOwnProperty('winningCards')) {
-        turn.winningCards = [];
-    }
-
-    const previousPlayerIndex = game.players.findIndex(
-        player => player.playerId === game.dealerPlayerId
-    );
-
-    const nextPlayerIndex =
-        previousPlayerIndex + 1 < game.players.length
-            ? previousPlayerIndex + 1
-            : 0;
-
-    turn.dealerPlayerId = game.players[nextPlayerIndex].playerId;
-    game.dealerPlayerId = game.players[nextPlayerIndex].playerId;
-
-    return turn;
-};
-
 const websocket = ({ port, server }) => {
-    const gameLobby = new WebSocketGameLobbyServer({ port, server });
+    const gameLobby = new WebSocketGameLobbyServer({
+        port,
+        server
+    });
 
     gameLobby.addEventListener(
         'start',
         async ({ gameId, decks }, datastore) => {
-            await datastore.editGame(gameId, game => setupGame(game, decks));
-            await datastore.editGame(gameId, setupPlayersInGame);
+            const { players } = await datastore.findGame(gameId);
+            const { turnId } = await datastore.currentTurn(gameId);
+
+            await datastore.editGame(gameId, game => {
+                if (!decks) decks = [{ value: 'Base' }];
+
+                game.custom.dealerPlayerId = players[0].playerId;
+                game.custom.deck = {
+                    blackCards: shuffle(
+                        decks
+                            .map(({ value }) => [...data[value].blackCards])
+                            .flat()
+                    ),
+                    whiteCards: shuffle(
+                        decks
+                            .map(({ value }) => [...data[value].whiteCards])
+                            .flat()
+                    )
+                };
+                return game;
+            });
 
             await datastore.editGame(gameId, async game => {
-                setupCurrentTurn(game, await datastore.currentTurn(gameId));
+                for (let i = 0; i < players.length; i += 1) {
+                    await datastore.editPlayer(
+                        gameId,
+                        players[i].playerId,
+                        player => {
+                            player.custom.hand = game.custom.deck.whiteCards.splice(
+                                0,
+                                MAX_CARDS_IN_HAND
+                            );
+                            player.custom.blackCards = [];
+                            return player;
+                        }
+                    );
+                }
+                await datastore.editTurn(gameId, turnId, turn => {
+                    turn.custom.blackCard = game.custom.deck.blackCards.shift();
+                    turn.custom.playedCards = [];
+                    turn.custom.winningCards = [];
+                    turn.custom.dealerPlayerId = game.custom.dealerPlayerId;
+                    return turn;
+                });
                 return game;
             });
         }
     );
+
     gameLobby.addEventListener(
         'update-name',
         async ({ gameId, playerId, name }, datastore) => {
@@ -103,59 +75,103 @@ const websocket = ({ port, server }) => {
             });
         }
     );
+
     gameLobby.addEventListener(
         'play-cards',
         async ({ gameId, playerId, playedCards }, datastore) => {
-            await datastore.editPlayer(gameId, playerId, player =>
-                removePlayedCardsFromPlayer(player, playedCards)
-            );
+            const { turnId } = await datastore.currentTurn(gameId);
 
-            await datastore.editTurn(
-                gameId,
-                (await datastore.currentTurn(gameId)).turnId,
-                turn => {
-                    turn.playedCards.push({
-                        playerId,
-                        whiteCards: playedCards
-                    });
-                    return turn;
-                }
-            );
+            await datastore.editPlayer(gameId, playerId, player => {
+                playedCards.map(({ id }) =>
+                    removeArrayItem(player.custom.hand, card => card.id === id)
+                );
+                return player;
+            });
+
+            await datastore.editTurn(gameId, turnId, turn => {
+                turn.custom.playedCards.push({
+                    playerId,
+                    whiteCards: playedCards
+                });
+                return turn;
+            });
         }
     );
     gameLobby.addEventListener(
         'dealer-select',
         async ({ gameId, winningPlayerId, winningCards }, datastore) => {
-            await datastore.editGame(gameId, setupPlayersInGame);
+            const {
+                players,
+                custom: { dealerPlayerId }
+            } = await datastore.findGame(gameId);
 
+            const previousPlayerIndex = players.findIndex(
+                player => player.playerId === dealerPlayerId
+            );
+
+            const nextPlayerIndex =
+                previousPlayerIndex + 1 < players.length
+                    ? previousPlayerIndex + 1
+                    : 0;
+
+            await datastore.editGame(gameId, game => {
+                game.custom.dealerPlayerId = players[nextPlayerIndex].playerId;
+                return game;
+            });
             await datastore.editPlayer(
                 gameId,
                 winningPlayerId,
                 async player => {
-                    player.blackCards.push(
+                    player.custom.blackCards.push(
                         (await datastore.currentTurn(gameId)).blackCard
                     );
                     return player;
                 }
             );
-
             await datastore.editTurn(
                 gameId,
                 (await datastore.currentTurn(gameId)).turnId,
                 turn => {
-                    turn.winningCards = winningCards;
+                    turn.custom.winningCards = winningCards;
                     return turn;
                 }
             );
 
             await datastore.endTurn(gameId);
 
-            await datastore.editTurn(
-                gameId,
-                (await datastore.currentTurn(gameId)).turnId,
-                async turn =>
-                    setupCurrentTurn(await datastore.findGame(gameId), turn)
-            );
+            await datastore.editGame(gameId, async game => {
+                await datastore.editTurn(
+                    gameId,
+                    (await datastore.currentTurn(gameId)).turnId,
+                    async turn => {
+                        turn.custom.blackCard = game.custom.deck.blackCards.shift();
+                        turn.custom.playedCards = [];
+                        turn.custom.winningCards = [];
+                        turn.custom.dealerPlayerId =
+                            players[nextPlayerIndex].playerId;
+                        return turn;
+                    }
+                );
+
+                for (let i = 0; i < players.length; i += 1) {
+                    await datastore.editPlayer(
+                        gameId,
+                        players[i].playerId,
+                        player => {
+                            player.custom.hand = [
+                                ...player.custom.hand,
+                                ...game.custom.deck.whiteCards.splice(
+                                    0,
+                                    MAX_CARDS_IN_HAND -
+                                        player.custom.hand.length
+                                )
+                            ];
+                            return player;
+                        }
+                    );
+                }
+                return game;
+            });
         }
     );
 };
