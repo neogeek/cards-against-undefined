@@ -59,7 +59,7 @@ export default () => {
             <RoomHeader />
             <PageWrapper>
                 <div>
-                    {player.isAdmin && (
+                    {player?.isAdmin && (
                         <>
                             <p>Select decks</p>
                             <Select
@@ -72,7 +72,7 @@ export default () => {
                     )}
 
                     <p>Waiting on other players ...</p>
-                    {player.isAdmin && (
+                    {player?.isAdmin && (
                         <Button
                             onClick={e => {
                                 e.preventDefault();
