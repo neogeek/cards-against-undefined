@@ -53,18 +53,12 @@ const websocket = ({ port, server }) => {
                 if (!decks) decks = [{ value: 'Base' }];
 
                 game.custom.dealerPlayerId = players[0].playerId;
-                game.custom.deck = {
-                    blackCards: shuffle(
-                        decks
-                            .map(({ value }) => [...data[value].blackCards])
-                            .flat()
-                    ),
-                    whiteCards: shuffle(
-                        decks
-                            .map(({ value }) => [...data[value].whiteCards])
-                            .flat()
-                    )
-                };
+                game.custom.deck.blackCards = shuffle(
+                    decks.map(({ value }) => [...data[value].blackCards]).flat()
+                );
+                game.custom.deck.whiteCards = shuffle(
+                    decks.map(({ value }) => [...data[value].whiteCards]).flat()
+                );
                 return game;
             });
 
