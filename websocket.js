@@ -1,4 +1,7 @@
-const { WebSocketGameLobbyServer } = require('websocket-game-lobby');
+const {
+    WebSocketGameLobbyServer,
+    EphemeralDataStore
+} = require('websocket-game-lobby');
 
 const shuffle = require('shuffle-array');
 
@@ -9,9 +12,35 @@ const { removeArrayItem } = require('./utils');
 const MAX_CARDS_IN_HAND = 5;
 
 const websocket = ({ port, server }) => {
+    const datastore = new EphemeralDataStore();
+
     const gameLobby = new WebSocketGameLobbyServer({
         port,
-        server
+        server,
+        datastore
+    });
+
+    datastore.addEventListener('createGame', (game, datastore) => {
+        game.custom.dealerPlayerId = null;
+        game.custom.deck = { blackCards: [], whiteCards: [] };
+
+        return game;
+    });
+
+    datastore.addEventListener('createPlayer', (player, datastore) => {
+        player.custom.hand = [];
+        player.custom.blackCards = [];
+
+        return player;
+    });
+
+    datastore.addEventListener('createTurn', (turn, datastore) => {
+        turn.custom.blackCard = null;
+        turn.custom.playedCards = [];
+        turn.custom.winningCards = [];
+        turn.custom.dealerPlayerId = null;
+
+        return turn;
     });
 
     gameLobby.addEventListener(
@@ -49,15 +78,12 @@ const websocket = ({ port, server }) => {
                                 0,
                                 MAX_CARDS_IN_HAND
                             );
-                            player.custom.blackCards = [];
                             return player;
                         }
                     );
                 }
                 await datastore.editTurn(gameId, turnId, turn => {
                     turn.custom.blackCard = game.custom.deck.blackCards.shift();
-                    turn.custom.playedCards = [];
-                    turn.custom.winningCards = [];
                     turn.custom.dealerPlayerId = game.custom.dealerPlayerId;
                     return turn;
                 });
@@ -145,8 +171,6 @@ const websocket = ({ port, server }) => {
                     (await datastore.currentTurn(gameId)).turnId,
                     async turn => {
                         turn.custom.blackCard = game.custom.deck.blackCards.shift();
-                        turn.custom.playedCards = [];
-                        turn.custom.winningCards = [];
                         turn.custom.dealerPlayerId =
                             players[nextPlayerIndex].playerId;
                         return turn;
