@@ -137,7 +137,7 @@ const websocket = ({ port, server }) => {
                 }
             );
 
-            await datastore.endTurn(gameId);
+            await datastore.endCurrentTurn(gameId);
 
             await datastore.editGame(gameId, async game => {
                 await datastore.editTurn(
