@@ -16,16 +16,16 @@
     "websocket-game-lobby": "4.0.0"
   },
   "devDependencies": {
-    "@neogeek/common-react-hooks": "1.0.0",
-    "@neogeek/custom-webpack-cli": "2.0.1",
-    "concurrently": "5.2.0",
+    "@neogeek/common-react-hooks": "2.0.1",
+    "@neogeek/custom-webpack-cli": "2.1.0",
+    "concurrently": "5.3.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-router-dom": "5.2.0",
     "reconnecting-websocket": "4.4.0",
-    "styled-components": "5.1.1",
+    "styled-components": "5.2.0",
     "vh-check": "2.0.5",
-    "websocket-game-lobby-client-hooks": "1.5.1"
+    "websocket-game-lobby-client-hooks": "1.5.2"
   },
   "scripts": {
     "start": "node index.js",
