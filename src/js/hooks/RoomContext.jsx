@@ -20,6 +20,9 @@ export const RoomWrapper = withRouter(({ history, children }) => {
     });
 
     useEffect(() => {
+        if (!data) {
+            return;
+        }
         if (data.game) {
             if (!data.game.started) {
                 history.push(`/lobby`);
@@ -39,12 +42,12 @@ export const RoomWrapper = withRouter(({ history, children }) => {
     return (
         <RoomContext.Provider
             value={{
-                data,
-                player: data.player,
-                turn: data.turn,
+                data: data || {},
+                player: data?.player,
+                turn: data?.turn,
                 gameCode,
                 playerId,
-                isSpectator: Boolean(data.spectator?.spectatorId),
+                isSpectator: Boolean(data?.spectator?.spectatorId),
                 send
             }}
         >
