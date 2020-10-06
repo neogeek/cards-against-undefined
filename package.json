@@ -12,12 +12,12 @@
     "qs": "6.9.4",
     "react-select": "3.1.0",
     "shuffle-array": "1.0.1",
-    "websocket-event-wrapper": "1.1.0",
+    "websocket-event-wrapper": "1.1.1",
     "websocket-game-lobby": "4.0.0"
   },
   "devDependencies": {
-    "@neogeek/common-react-hooks": "2.0.1",
-    "@neogeek/custom-webpack-cli": "2.1.0",
+    "@neogeek/common-react-hooks": "2.0.2",
+    "@neogeek/custom-webpack-cli": "2.3.0",
     "concurrently": "5.3.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -25,7 +25,7 @@
     "reconnecting-websocket": "4.4.0",
     "styled-components": "5.2.0",
     "vh-check": "2.0.5",
-    "websocket-game-lobby-client-hooks": "1.5.3"
+    "websocket-game-lobby-client-hooks": "1.5.4"
   },
   "scripts": {
     "start": "node index.js",
