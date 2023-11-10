@@ -13,7 +13,7 @@
     "react-select": "3.1.0",
     "shuffle-array": "1.0.1",
     "websocket-event-wrapper": "1.1.1",
-    "websocket-game-lobby": "4.0.0"
+    "websocket-game-lobby": "4.1.1"
   },
   "devDependencies": {
     "@neogeek/common-react-hooks": "2.0.2",
