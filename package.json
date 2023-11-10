@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@neogeek/common-react-hooks": "2.0.2",
-    "@neogeek/custom-webpack-cli": "2.3.0",
+    "@neogeek/custom-webpack-cli": "3.0.1",
     "concurrently": "5.3.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
