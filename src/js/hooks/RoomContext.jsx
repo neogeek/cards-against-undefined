@@ -16,7 +16,7 @@ export const RoomWrapper = withRouter(({ history, children }) => {
         connected,
         send
     } = useWebSocketGameLobbyClient({
-        port: process.env.NODE_ENV === 'development' ? 5000 : undefined
+        port: process.env.NODE_ENV === 'development' ? 3030 : undefined
     });
 
     useEffect(() => {

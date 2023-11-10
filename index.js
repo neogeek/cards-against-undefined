@@ -4,6 +4,6 @@ const websocket = require('./websocket');
 
 websocket({
     server: http({
-        port: process.env.PORT || 5000
+        port: process.env.PORT || 3030
     })
 });
