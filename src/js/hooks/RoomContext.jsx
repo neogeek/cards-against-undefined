@@ -1,23 +1,20 @@
 import React, { createContext, useEffect, useState } from 'react';
 
-import { withRouter } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { Reconnecting } from '../views';
 
 import { useWebSocketGameLobbyClient } from 'websocket-game-lobby-client-hooks';
 
-export const RoomContext = createContext();
+export const RoomContext = createContext({});
 
-export const RoomWrapper = withRouter(({ history, children }) => {
-    const {
-        data,
-        gameCode,
-        playerId,
-        connected,
-        send
-    } = useWebSocketGameLobbyClient({
-        port: process.env.NODE_ENV === 'development' ? 3030 : undefined
-    });
+export const RoomWrapper = ({ children }) => {
+    let navigate = useNavigate();
+
+    const { data, gameCode, playerId, connected, send } =
+        useWebSocketGameLobbyClient({
+            port: process.env.NODE_ENV === 'development' ? 3030 : undefined
+        });
 
     useEffect(() => {
         if (!data) {
@@ -25,17 +22,17 @@ export const RoomWrapper = withRouter(({ history, children }) => {
         }
         if (data.game) {
             if (!data.game.started) {
-                history.push(`/lobby`);
+                navigate(`/lobby`);
             } else if (
                 data.turn.custom.playedCards.length ===
                 data.game.players.length - 1
             ) {
-                history.push(`/dealer-choice`);
+                navigate(`/dealer-choice`);
             } else {
-                history.push(`/game`);
+                navigate(`/game`);
             }
         } else {
-            history.push(`/`);
+            navigate(`/`);
         }
     }, [data]);
 
@@ -54,4 +51,4 @@ export const RoomWrapper = withRouter(({ history, children }) => {
             {connected ? children : <Reconnecting />}
         </RoomContext.Provider>
     );
-});
+};
